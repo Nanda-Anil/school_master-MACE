@@ -1,0 +1,100 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load static %}
+{% load static %}
+{% block content %}
+
+<div class="page-title">
+	<div class="container">
+		<h2>Downloads</h2>
+		<div class="breadcrumb">
+			<ul class="breadcrumb">
+				<!-- Breadcrumb NavXT 7.2.0 -->
+				<span property="itemListElement" typeof="ListItem"><i class="fa fa-home"></i><a property="item"
+						typeof="WebPage" title="Go to TKM Institute of Management." href="{%  url 'web:index' %}"
+						class="home"><span property="name">Home</span></a>
+					<meta property="position" content="1">
+				</span><i class="fa fa-angle-right"></i><span property="itemListElement" typeof="ListItem"><span
+						property="name">Downloads</span>
+					<meta property="position" content="2">
+				</span>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<div class="main-content">
+	<div class="container cu-cont">
+
+        <section class="container-fluid section">
+            <div class="container">
+                <div class="row justify-content-center">
+                    
+                    <div class="col-12 col-md-6 col-lg-4 ">
+                      <a target="_blank" href="{% url 'web:admissions_forms' %}" class="icon-btn">
+                          <i class="fa-solid fa-graduation-cap"></i>
+                          Admission Forms
+                      </a>
+                    </div>
+                    
+                    <div class="col-12 col-md-6 col-lg-4 ">
+                      <a target="_blank" href="{% url 'web:admissions_fee_ug' %}" class="icon-btn">
+                          <i class="fa-solid fa-graduation-cap"></i>
+                          Fee Structure UG
+                      </a>
+                    </div>
+                    
+                    <div class="col-12 col-md-6 col-lg-4 ">
+                      <a target="_blank" href="{% url 'web:admissions_fee_pg' %}" class="icon-btn">
+                          <i class="fa-solid fa-graduation-cap"></i>
+                          Fee Structure PG
+                      </a>
+                    </div>
+                    
+                    <div class="col-12 col-md-6 col-lg-4 ">
+                      <a target="_blank" href="#" class="icon-btn">
+                          <i class="fa-solid fa-graduation-cap"></i>
+                          Syllabus
+                      </a>
+                    </div>
+                    
+                    <div class="col-12 col-md-6 col-lg-4 ">
+                      <a target="_blank" href="#" class="icon-btn">
+                          <i class="fa-solid fa-graduation-cap"></i>
+                          Question Papers
+                      </a>
+                    </div>
+                    
+                    <div class="col-12 col-md-6 col-lg-4 ">
+                      <a target="_blank" href="{% static 'pdf/Mandstory Disclosure 2022 new .pdf' %}" class="icon-btn">
+                          <i class="fa-solid fa-graduation-cap"></i>
+                          Mandatory Disclosure
+                      </a>
+                    </div>
+                    
+                    <div class="col-12 col-md-6 col-lg-4 ">
+                      <a target="_blank" href="{% static 'pdf/EOA-Report 22-23.PDF' %}" class="icon-btn">
+                          <i class="fa-solid fa-graduation-cap"></i>
+                          Extention of Approval
+                      </a>
+                    </div>
+                    
+                    <div class="col-12 col-md-6 col-lg-4 ">
+                      <a target="_blank" href="#" class="icon-btn">
+                          <i class="fa-solid fa-graduation-cap"></i>
+                          Other Downloads
+                      </a>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+		<!-- /wp:columns -->
+
+		<!-- wp:buttons -->
+		<div class="wp-block-buttons"></div>
+		<!-- /wp:buttons -->
+	</div>
+</div>
+
+{% endblock %}

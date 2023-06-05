@@ -1,0 +1,94 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load static %}
+{% load static %}
+{% block content %}
+
+<div class="page-title">
+    <div class="container">
+        <h2>Hostel</h2>
+        <div class="breadcrumb">
+            <ul class="breadcrumb">
+                <!-- Breadcrumb NavXT 7.2.0 -->
+                <span property="itemListElement" typeof="ListItem"><i class="fa fa-home"></i><a property="item"
+                        typeof="WebPage" title="Go to TKM Institute of Management." href="{%  url 'web:index' %}"
+                        class="home"><span property="name">Home</span></a>
+                    <meta property="position" content="1">
+                </span><i class="fa fa-angle-right"></i><span property="itemListElement" typeof="ListItem"><span
+                        property="name">Facilities</span>
+                    <meta property="position" content="2">
+                </span>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="main-content">
+    <div class="container cu-cont">
+
+        <section class="container-fluid section">
+            <div class="container">
+                <div class="row align-items-center">
+
+                    <div class="col-12">
+
+                        <p>MACE students enjoy a vibrant and dynamic living and learning environment on our stunning
+                            residential campus. Our residential community celebrates and promotes diversity, fosters
+                            respect and leadership skills and facilitates a wide variety of experiences and activities
+                            that support the development of well rounded individuals. MACE houses architecturally
+                            elegant and well organized separate hostel facilities for boys and girls at affordable
+                            costs. The Boys Hostel can accommodate approximately 150 students and the Girls Hostel can
+                            house almost 100 students. Spacious study halls and mess halls are highlights of the hostel.
+                            Round the clock high security is provided to safeguard the students from any unpleasantness
+                            and guarantee a safe stay.</p>
+                    </div>
+
+
+
+                    <div class="col-12">
+                        <h3 class="tablehead">Hostel Wardens</h3>
+                        <div id="placed" class="owl-carousel owl-theme owl-loaded owl-drag">
+
+                            <div class="faculty_card">
+                                <div class="faculty_img_wrap">
+                                    <img src="{% static 'images/dummy.jpg' %}" alt="">
+                                </div>
+                                <h2 class="heading3">Mr. Amal Pratap </h2>
+                                <p>Asst. Professor, Department of Mechanical Engineering</p>
+                                <label class="greenfont">Boys Hostel</label>
+                            </div>
+
+                            <div class="faculty_card">
+                                <div class="faculty_img_wrap">
+                                    <img src="{% static 'images/dummy.jpg' %}" alt="">
+                                </div>
+                                <h2 class="heading3">Aswathy.S.U </h2>
+                                <p>Professor &amp; HOD, Department of Computer Science and Engineering</p>
+                                <label class="greenfont">Girls Hostel</label>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                </div>
+            </div>
+
+
+
+    </div>
+
+</div>
+
+</section>
+<!-- /wp:columns -->
+
+<!-- wp:buttons -->
+<div class="wp-block-buttons"></div>
+<!-- /wp:buttons -->
+</div>
+</div>
+
+{% endblock %}

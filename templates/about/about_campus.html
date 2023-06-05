@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load static %}
+{% load static %}
+{% block content %}
+
+<div class="page-title">
+	<div class="container">
+		<h2>Our Campus</h2>
+		<div class="breadcrumb">
+			<ul class="breadcrumb">
+				<!-- Breadcrumb NavXT 7.2.0 -->
+				<span property="itemListElement" typeof="ListItem"><i class="fa fa-home"></i><a property="item"
+						typeof="WebPage" title="Go to TKM Institute of Management." href="{%  url 'web:index' %}"
+						class="home"><span property="name">Home</span></a>
+					<meta property="position" content="1">
+				</span><i class="fa fa-angle-right"></i><span property="itemListElement" typeof="ListItem"><span
+						property="name">Our Campus</span>
+					<meta property="position" content="2">
+				</span>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<div class="main-content">
+	<div class="container cu-cont">
+
+		<section class="container-fluid section">
+			<div class="container">
+				<div class="row justify-content-center">
+					<div class="col-12 ">
+						<label class="greenfont">ABOUT MUSLIM ASSOCIATION  COLLEGE</label>
+						<h2 class="heading1">We always provide everyone with education that exceeds expectations.</h2>
+						<p>Muslim Association College of Engineering (MACE), Venjaramoodu, Thiruvananthapuram, established in the year 2002, 
+						is managed by Muslim Association Thiruvananthapuram.The Association, which is registered under Travancore Cochin Literary 
+						and Scientific Societies Act, was formed in the year 1966, with the objective of imparting quality education and other 
+						services to the society, by a band of enlightened person belonging to the Islamic community in the capital city of Kerala.
+						Muslim association, over the years has grown in to one of the premier cultural organization in the state, whose contributions to the cause 
+						of education have been widely acknowledged. The main asset of the association has always been fast-growing fraternity of members, who occupy 
+						prominent position in profession of education, civil service, and business, social and cultural fields. Their selfless service and dedicated 
+						efforts have carried this organization to an envious realm of achievement.</p>
+						
+					</div>
+					
+					<div class="col-12 ">
+						<img src="static\images\slider-image01.png" style="width: 100%;height: 100%;object-fit: cover"></div>
+					<div class="col-12 " style="margin-top:15px">
+						
+						
+						<p>MACE is situated in a fast developing area, endowed with lush greenery and hills, in a sprawling campus of 25 acres at Venjaramoodu, Thiruvananthapuram District, and is very close to the capital city of Kerala. A breath of fresh, sweet smelling air, surrounded by a dramatic landscape of magnificence, MACE lies in all it’s majestic, awe-inspiring splendour. Its eco-friendliness, efficient water harvesting and recycling systems make it all the more attractive.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- /wp:columns -->
+
+		<!-- wp:buttons -->
+		<div class="wp-block-buttons"></div>
+		<!-- /wp:buttons -->
+	</div>
+</div>
+
+{% endblock %}

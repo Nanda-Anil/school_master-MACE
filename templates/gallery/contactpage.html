@@ -1,0 +1,116 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load static %}
+{% block content %}
+
+<!-- #page-title -->
+<div class="page-title">
+	<div class="container">
+
+		<div class="breadcrumb">
+							<ul class="breadcrumb">
+					<!-- Breadcrumb NavXT 7.2.0 -->
+<span property="itemListElement" typeof="ListItem"><i class="fa fa-home"></i><a property="item" typeof="WebPage" title="Go to TKM Institute of Management." href="" class="home"><span property="name">Home</span></a><meta property="position" content="1"></span><i class="fa fa-angle-right"></i><span property="itemListElement" typeof="ListItem"><span property="name">Contact us</span><meta property="position" content="2"></span>				</ul>
+					</div>
+	</div>
+</div>
+<div class="pd-p">
+	<div class="container cu-cont">
+        <form id="applyOnline" method="POST" action="" enctype="multipart/form-data" novalidate="novalidate" data-url="{% url 'web:contact_page' %}" >
+            {% csrf_token %}
+            <fieldset>
+                <section class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <label>Name</label>
+                        <input class="required" type="text" name="oa-name" value="" tabindex="1">
+                    </div>
+
+                </section>
+
+                <section class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <label>Email</label>
+                        <input type="text" class="required email" name="oa-email-per" tabindex="15">
+                    </div>
+                </section>
+
+                 <section class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <label>Message</label>
+                        <textarea class="required" name="oa-message" value="" maxlength="300" tabindex="13"></textarea>
+                    </div>
+                </section>
+
+                <section class="row">
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                        <label></label>
+                        <input id="regSubmit" type="submit" name="submit" value="Submit" class="button" tabindex="83">
+                        <div class="tinyLoader"></div>
+                    </div>
+                </section>
+            </fieldset>
+        </form>
+   
+        <link href="{% static 'css/toastr.css' %}" rel="stylesheet" type="text/css" id="app-dark-stylesheet" />
+
+        <script src="{% static 'js/toastr.min.js' %}"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {  
+
+                $( ".dp11111").datepicker({
+                    dateFormat: 'YY-MM-DD',
+                    changeYear: true,
+                    minDate: "-5Y",
+                });
+                $( ".yr1111" ).datepicker({dateFormat: 'YY',  changeYear: true,  changeMonth: false});
+                $('.tinyLoader').hide();
+                var ajaxurl = $('#applyOnline').attr('data-url');
+                var zsoptions = {
+                    url: ajaxurl,
+                    target:'#regResponse',
+                    dataType: 'json', // set the expected data type to JSON
+                    beforeSubmit:function(){
+                        var res=$('#applyOnline').validate().numberOfInvalids();
+                        if(res==0){
+                            $(".tinyLoader").show();
+                            $('#regResponse').empty();
+                            return true;
+                        } else {
+                            return false;
+                        }
+                    },
+                    success:function(data){
+                        console.log(data.success); // logs the success flag from the response
+                        console.log(data.message); // logs the message from the response
+                        $('.tinyLoader').hide();
+                        $('#applyOnline')[0].reset(); // reset the form fields
+                        // Get the count span element
+                        let countSpan = document.getElementById('countSpan');
+                        console.log(countSpan);
+<!--                        countSpan.innerHTML = data.count;-->
+
+
+                        toastr.success(data.message, 'Success', {
+                            closeButton: true,
+                            progressBar: true,
+                            positionClass: 'toast-top-right',
+                            timeOut: 3000,
+                        });
+
+                    },
+                    error:function(xhr, status, error){ // handle errors
+                        console.log(xhr); // log the full response object
+                        console.log(status); // log the status code
+                        console.log(error); // log the error message
+                    },
+                    data : { action : 'submitTOA' }
+                };
+                $('#applyOnline').ajaxForm(zsoptions);
+        
+            });
+        </script>
+	</div>
+</div>
+
+{% endblock content %}

@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load static %}
+{% load static %}
+{% block content %}
+
+<div class="page-title">
+	<div class="container">
+		<h2>Fee Structure PG</h2>
+		<div class="breadcrumb">
+			<ul class="breadcrumb">
+				<!-- Breadcrumb NavXT 7.2.0 -->
+				<span property="itemListElement" typeof="ListItem"><i class="fa fa-home"></i><a property="item"
+						typeof="WebPage" title="Go to TKM Institute of Management." href="{%  url 'web:index' %}"
+						class="home"><span property="name">Home</span></a>
+					<meta property="position" content="1">
+				</span><i class="fa fa-angle-right"></i><span property="itemListElement" typeof="ListItem"><span
+						property="name">Admission</span>
+					<meta property="position" content="2">
+				</span>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<div class="main-content">
+	<div class="container cu-cont">
+
+        <section class="container-fluid section">
+            <div class="container">
+                <div class="row justify-content-center">
+                    
+                    <div class="col-12">
+                        <h3 class="heading2">Fee Stucture PG</h3>
+                        <p>The fee structure is fixed as per Govt. norms. Fee structure for the new academic year may be subject to changes as decided by the Management, and will be informed to the applicants during the time of admission.</p>    
+                    </div>
+                    
+                    <div class="col-12 col-md-6 col-lg-4 ">
+                      <a target="_blank" href="{% static 'pdf/M.Tech Fee Structure.pdf' %}" class="icon-btn">
+                          <i class="fa-solid fa-graduation-cap"></i>
+                          M.Tech Fee Structure
+                      </a>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+		<!-- /wp:columns -->
+
+		<!-- wp:buttons -->
+		<div class="wp-block-buttons"></div>
+		<!-- /wp:buttons -->
+	</div>
+</div>
+
+{% endblock %}

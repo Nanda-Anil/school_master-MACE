@@ -1,0 +1,383 @@
+body{height:auto !important;}
+#facultyReg input, #facultyReg select, #facultyReg textarea, .timIN input, .timIN select, .timIN textarea{
+	width: 100%;
+}
+#facultyReg input, #facultyReg select, .timIN input, .timIN select{
+	height: 35px;
+}
+.timIN .button{
+	width:auto !important;
+}
+#facultyReg textarea, .timIN textarea{
+	min-height: 150px;
+}
+#facultyReg .row, .timIN .row{
+	margin-bottom: 20px;
+}
+#facultyReg label, .timIN label{
+	display: block;
+	cursor: unset;
+}
+
+.column-emp-co{
+	width: 8%;
+}
+.column-name, .column-department, .column-designation{
+	width: 16%;
+}
+.column-priority, .column-edit{
+	width: 5%;
+}
+.actionEdit a{
+	background: url('../images/user_edit.png') no-repeat 0 0;
+	padding-left: 28px;
+	color: #000;
+}
+.imgInfo{
+	border: 1px #aaa solid;
+	position: absolute;
+	left: 0;
+	top: 24px;
+	width: auto;
+	height: auto;
+	z-index: 999999;
+	border-radius: 5px;
+	background: #eee;
+	padding: 10px;
+	display: none;
+}
+
+.imgInfo strong{
+	font-style: italic;
+	text-decoration: underline;
+	font-weight: bold;
+}
+.imgInfo p{
+	height: auto !important;
+	margin: 5px 0 !important;
+	color: #f44;
+}
+.browse{
+	position: relative;
+	margin-bottom: 10px;
+}
+.browse .info{
+	color: #aa1a89;
+	text-decoration: underline;
+	cursor: pointer;
+	background: url('../images/info.png') left center no-repeat;
+	padding-left: 20px;
+	margin-left: 10px;
+}
+.username{
+	position: relative;
+	overflow: auto !important;
+}
+.notFound{
+	float: left;
+	width: 100%;
+}
+#userList{
+	margin-top: 20px;
+}
+#userList .username{
+	overflow: visible !important;
+}
+#users_table{
+	margin: 10px 0;
+	float: left;
+	width: 100%;
+}
+#users_table .editData{
+	background: #fff;
+	border: 1px #888 solid;
+}
+#users_table input, #users_table select{
+	border: none;
+	box-shadow: none;
+	background: none;
+	width: 100%;
+}
+#users_table thead tr, #users_table tfoot tr{
+	background: #ccc;
+}
+#users_table tr{
+	background: #eee;
+}
+#departmentFilter{
+	float: left;
+}
+#goTo label, #departmentFilter label{
+	margin: 5px 10px;
+}
+#users_table tr.alternate{
+	background: #fff;
+}
+#users_table td{
+	vertical-align: middle;
+}
+#users_table th, #users_table td{
+	padding: 8px 10px;
+	text-align: left;
+}
+#users_table select{
+	height: 20px;
+	padding: 0;
+}
+#filterDelegate li{
+	float: left;
+}
+.hasThumb{
+	width: 16px;
+	height: 16px;
+	display: block;
+	float: left;
+	margin-right: 5px;
+	background: url('../images/hasThumb.jpg') no-repeat 0 0;
+}
+#userList .userThumb{
+	width: 123px;
+	position: absolute;
+	left: -105px;
+	top: -5px;
+	display: none;
+	background: url('../images/arrow.png') no-repeat 103px 2px;
+}
+.userThumb img{
+	width: 103px;
+	border: 1px #bbb solid;
+	display:block;
+	padding: 4px;
+	background: #fff;
+}
+.over img{
+	width: 103px;
+	border: 1px #aaa solid;
+	background: #ddd;
+	z-index: 99;
+}
+
+/*.error, .success{
+	margin: 10px;
+}*/
+#delegateList ul li{
+	float: left;
+	margin-right: 10px;
+}
+
+.spacer{
+	display: block;
+	height: 15px;
+	width: 10px;
+	float: left;
+}
+label.error{
+	color: red;
+}
+.err{
+	background: #EEDDDD;
+    border: 1px solid #EEAAAA;
+    color: #AA0000;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.success{
+	background: #DDEEDD;
+    border: 1px solid #AAFFAA;
+    color: #00AA00;
+    padding: 10px !important;
+}
+.mceLayout{
+	width: 100% !important;
+}
+.browse img{
+	border: 1px #ddd solid;
+	width: 50px !important;
+	width: auto;
+	padding: 2px;
+	margin:5px 0;
+}
+#facultyReg .Btn{
+    font-style: italic;
+    cursor: pointer;
+    color: #fff;
+	background: none repeat scroll 0 0 #4a76a6;
+}
+#facultyReg .flBtn, #facultyReg .clBtn{ 
+    height: 31px;
+    line-height: 30px;
+    position: absolute;
+    text-align: center;
+    top: 2px;
+    width: 60px;
+}
+#facultyReg .button{
+	width: auto;
+}
+#CSRclearForm, #CSRregSubmit, #CSRregBack{
+	width: auto;
+}
+.rmBtn, .cmBtn{
+	padding: 2px 10px;
+	margin: 20px 8px;
+	float: left;
+}
+.cmBtn{
+	background: red;
+	display: none;
+}
+.flBtn:hover, .clBtn:hover, #userReg .button:hover, #resetPass .button:hover{
+	background: #4a7faf;
+}
+.closeBtn{
+	display: block;
+	float: right;
+	width: 16px;
+	height: 16px;
+	cursor: pointer;
+	background: url("../images/close.png") no-repeat 0 0;
+	margin-top: 5px;
+}
+.invisible{
+	visibility: hidden;
+	position: relative;
+	z-index: 9999;
+}
+#regBack{
+	display: none;
+}
+.ajaxLoader{
+	display: none;
+	width: 24px;
+	height: 24px;
+	background: url("../images/ajax-loader.gif") 0 0 no-repeat;
+}
+#bigLoader{
+	width: 128px;
+	height: 128px;
+	position: fixed;
+	z-index: 9999;
+	background: url("../images/big-loader.gif") no-repeat 0 0;
+	display: none;
+}
+#thumbWrapper .ajaxLoader{
+	float: left;
+	margin: 23px 0;
+}
+#userReg .invisible input{
+	width: 55%;
+}
+#facultyReg .clBtn{
+	right: 2px;
+}
+#facultyReg .flBtn{
+	right: 64px;
+}
+.page .clBtn{
+	right: 7%;
+	top: 2px;
+}
+.page .flBtn{
+	right: 26%;
+	top: 2px;
+}
+
+#userReg .button, #delegateList .button{
+	width: auto;
+	background: #4a76a6;
+	color: #fff;
+	font-style: italic;
+	cursor: pointer;
+	margin-left: 5px;
+	line-height: 20px;
+	border: none;
+}
+#resetPass .button{
+	display: block;
+	float: left;
+	padding: 5px 10px;
+	background: #4a76a6;
+	color: #fff;
+	font-style: italic;
+	cursor: pointer;
+}
+#userReg .button{
+	float: left;
+}
+
+.submitWr{
+	padding-top: 22px;
+}
+
+.loader{
+	visibility: hidden;
+}
+#userReg .capTxt{
+	width: 40%;
+	margin-right: 10px;
+}
+#userReg .capImg{
+	float: left;
+	width: 150px;
+	height: 37px;
+}
+#userReg #name-title{
+	width: 85px;
+}
+#facultyReg #thumbWrapper img{
+	float: left;
+	width: 150px !important;
+}
+.loaderSmall{
+	background: url('../images/ajax-loader.gif') no-repeat 0 0;
+	width: 24px;
+	height: 24px;
+	display: none;
+	float: left;
+}
+.designationWrapper .loaderSmall{
+	margin-top: 5px;
+}
+.over img{
+	width: 103px;
+	border: 1px #aaa solid;
+	background: #ddd;
+	z-index: 99;
+}
+#users_table td i, .edit-user{
+	width: 16px;
+	height: 16px;
+	display: block;
+	float: left;
+}
+.edit-faculty{
+	background: url('../images/edit.png') no-repeat 0 0;
+	cursor: pointer;
+	margin-right: 5px;
+}
+.delete-faculty{
+	background: url('../images/delete.png') no-repeat 0 0;
+	cursor: pointer;
+	margin-right: 5px;
+}
+.delete-faculty-confirm{
+	background: url('../images/delete-confirm.png') no-repeat 0 0;
+	cursor: pointer;
+}
+.facultyEdit{
+	background: url('../images/update.png') no-repeat 0 0;
+	cursor: pointer;
+}
+.progress{
+	background: url('../images/loading.gif') no-repeat 0 0;
+}
+.done{
+	background: url('../images/done.png') no-repeat 0 0;
+}
+.errorAjx{
+	background: url('../images/error.png') no-repeat 0 0;
+}
+
+@media only screen and (max-width: 960px) { 
+	.responsive #facultyReg p, .responsive #facultyReg .browse, .responsive .submitWr, .responsive .captchaWr{width: 94%; clear: both;}
+}

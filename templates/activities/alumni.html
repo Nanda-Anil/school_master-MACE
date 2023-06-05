@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load static %}
+{% load static %}
+{% block content %}
+
+<div class="page-title">
+	<div class="container">
+		<h2>Alumni</h2>
+		<div class="breadcrumb">
+			<ul class="breadcrumb">
+				<!-- Breadcrumb NavXT 7.2.0 -->
+				<span property="itemListElement" typeof="ListItem"><i class="fa fa-home"></i><a property="item"
+						typeof="WebPage" title="Go to TKM Institute of Management." href="{%  url 'web:index' %}"
+						class="home"><span property="name">Home</span></a>
+					<meta property="position" content="1">
+				</span><i class="fa fa-angle-right"></i><span property="itemListElement" typeof="ListItem"><span
+						property="name">Activities</span>
+					<meta property="position" content="2">
+				</span>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<div class="main-content">
+	<div class="container cu-cont">
+
+        <section class="container-fluid section">
+			<div class="container">
+				<div class="row align-items-center">
+					
+					<div class="col-12">
+						<p>The MACE Alumni Association was formed in 2006 with an aim of bringing former students together and also for the overall development of college by having a wide MACE web. Endowment awards and proficiency prizes are bestowed on top scorers of the respective academic years.</p>
+					</div>
+					
+					<div class="col-12">
+						<h3 class="tablehead">Alumni Staff</h3>
+						
+						<div class="row justify-content-center">
+							
+							<div class="col-12 col-md-4 col-lg-3">
+								<div class="faculty_card">
+									<div class="faculty_img_wrap">
+										<img src="{% static 'images/dummy.jpg' %}" style="width: 250px;" alt="">
+									</div>
+									
+									<h2 class="heading3">Ms. Shamna B</h2>
+									<p>Alumni Staff Co-ordinator</p>
+									<label class="greenfont">Asst. Prof. Computer Science &amp; Engineering.</label>
+								</div>
+							</div>
+		
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</section>
+		<!-- /wp:columns -->
+
+		<!-- wp:buttons -->
+		<div class="wp-block-buttons"></div>
+		<!-- /wp:buttons -->
+	</div>
+</div>
+
+{% endblock %}

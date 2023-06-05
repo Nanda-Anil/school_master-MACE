@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load static %}
+{% load static %}
+{% block content %}
+
+<div class="page-title">
+	<div class="container">
+		<h2>PTA</h2>
+		<div class="breadcrumb">
+			<ul class="breadcrumb">
+				<!-- Breadcrumb NavXT 7.2.0 -->
+				<span property="itemListElement" typeof="ListItem"><i class="fa fa-home"></i><a property="item"
+						typeof="WebPage" title="Go to TKM Institute of Management." href="{%  url 'web:index' %}"
+						class="home"><span property="name">Home</span></a>
+					<meta property="position" content="1">
+				</span><i class="fa fa-angle-right"></i><span property="itemListElement" typeof="ListItem"><span
+						property="name">Activities</span>
+					<meta property="position" content="2">
+				</span>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<div class="main-content">
+	<div class="container cu-cont">
+
+        <section class="container-fluid section">
+            <div class="container">
+                <div class="row align-items-center">
+                    
+                    <div class="col-12">
+                        <h2 class="heading2">PTA</h2>
+                        <p>MACE has an efficient Parents-Teachers Association (PTA) system. The PTA consists of the co-ordinating staff members along with elected guardians of two or more (as decided by the management council) students as members. The PTA is a common forum for regular interaction between teachers and parents to discuss needs and status of students, academic-wise and otherwise. Overall improvement of the students is the primary focus here. All concerns of the parents are dealt by the PTA. The PTA also helps in fostering a good relationship and thereby an incredible working environment between staff, students and the respective guardians. It gives special care and attention to the needs of students from socially economic background. The PTA works in co-ordination with the CGPU for the welfare of the students.</p>
+                    </div>
+                    
+                    <div class="col-12">
+                        <h3 class="tablehead">PTA Staff</h3>
+                        
+                        <div class="row justify-content-center">
+                            
+                            <div class="col-12 col-md-4 col-lg-3">
+                                <div class="faculty_card">
+                                    <div class="faculty_img_wrap">
+                                        <img src="{% static 'images/dummy.jpg' %}" style="width: 250px;" alt="">
+
+                                    </div>
+                                    
+                                    <h2 class="heading3">Mr. Vishnu S</h2>
+                                    <p>PTA Secretary</p>
+                                    <label class="greenfont">Asst. Prof. Civil Engineering</label>
+                                </div>
+                            </div>
+        
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+		<!-- /wp:columns -->
+
+		<!-- wp:buttons -->
+		<div class="wp-block-buttons"></div>
+		<!-- /wp:buttons -->
+	</div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,182 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load static %}
+{% block content %}
+
+<!-- #page-title -->
+<div class="page-title">
+	<div class="container">
+		<h2>RATE US</h2>
+		<div class="breadcrumb">
+							<ul class="breadcrumb">
+					<!-- Breadcrumb NavXT 7.2.0 -->
+         <span property="itemListElement" typeof="ListItem"><i class="fa fa-home"></i><a property="item" typeof="WebPage" title="Go to TKM Institute of Management." href="" class="home"><span property="name">Home</span></a><meta property="position" content="1"></span><i class="fa fa-angle-right"></i><span property="itemListElement" typeof="ListItem"><span property="name">RATE US</span><meta property="position" content="2"></span>				</ul>
+					</div>
+	</div>
+</div>
+<div class="pd-p">
+	<div class="container cu-cont">
+        <form id="applyOnline" method="POST" action="" enctype="multipart/form-data" novalidate="novalidate" data-url="{% url 'web:rateus' %}">
+            {% csrf_token %}
+            <fieldset>
+                <section class="row">
+
+                    <div class="rate" >
+      <input type="radio" id="star1" name="rateing" value="5" />
+      <label for="star1" title="text"></label>
+      <input type="radio" id="star2" name="rateing" value="4" />
+      <label for="star2" title="text"></label>
+      <input type="radio" id="star3" name="rateing" value="3" />
+      <label for="star3" title="text"></label>
+      <input type="radio" id="star4" name="rateing" value="2" />
+      <label for="star4" title="text"></label>
+      <input type="radio" id="star5" name="rateing" value="1" />
+      <label for="star5" title="text"></label>
+    </div>
+                </section>
+                <section class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <label>Review</label>
+                        <textarea class="required" name="feedback" value="" maxlength="300" tabindex="13"></textarea>
+                    </div>
+                </section>
+
+
+
+                <section class="row">
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                        <label></label>
+                        <input id="regSubmit" type="submit" name="submit" value="Submit" class="button" tabindex="83">
+                        <div class="tinyLoader"></div>
+                    </div>
+                </section>
+            </fieldset>
+        </form>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+        <link href="{% static 'css/toastr.css' %}" rel="stylesheet" type="text/css" id="app-dark-stylesheet" />
+
+        <script src="{% static 'js/toastr.min.js' %}"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+
+                $( ".dp11111").datepicker({
+                    dateFormat: 'YY-MM-DD',
+                    changeYear: true,
+                    minDate: "-5Y",
+                });
+                $( ".yr1111" ).datepicker({dateFormat: 'YY',  changeYear: true,  changeMonth: false});
+                $('.tinyLoader').hide();
+                var ajaxurl = $('#applyOnline').attr('data-url');
+                var zsoptions = {
+                    url: ajaxurl,
+                    target:'#regResponse',
+                    dataType: 'json', // set the expected data type to JSON
+                    beforeSubmit:function(){
+                        var res=$('#applyOnline').validate().numberOfInvalids();
+                        if(res==0){
+                            $(".tinyLoader").show();
+                            $('#regResponse').empty();
+                            return true;
+                        } else {
+                            return false;
+                        }
+                    },
+                    success:function(data){
+                        console.log(data.success); // logs the success flag from the response
+                        console.log(data.message); // logs the message from the response
+                        $('.tinyLoader').hide();
+                        $('#applyOnline')[0].reset(); // reset the form fields
+                        // Get the count span element
+                        let countSpan = document.getElementById('countSpan');
+                        countSpan.innerHTML = data.count;
+
+                        toastr.success(data.message, 'Success', {
+                            closeButton: true,
+                            progressBar: true,
+                            positionClass: 'toast-top-right',
+                            timeOut: 3000,
+                        });
+
+                    },
+<!--                    error:function(xhr, status, error){ // handle errors-->
+<!--                        console.log(xhr); // log the full response object-->
+<!--                        console.log(status); // log the status code-->
+<!--                        console.log(error); // log the error message-->
+<!--                    },-->
+                    data : { action : 'submitTOA' }
+                };
+                $('#applyOnline').ajaxForm(zsoptions);
+
+            });
+        </script>
+	</div>
+</div>
+
+<style>
+    .red {
+        color: rgb(220, 0, 0);
+    }
+    div.overlay-popup-admission {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        min-height: 100vh;
+        z-index: 99;
+        background-color: #131313;
+        opacity: 0.9;
+    }
+    div.popup-open-admission {
+        position: fixed;
+        left: 15%;
+        right: 150px;
+        bottom: 0;
+        top: 8%;
+        z-index: 100;
+        width: 32%;
+        margin: auto;
+    }
+    .rate {
+  float: left;
+  height: 90px;
+  padding: 0 10px;
+}
+.rate:not(:checked) > input {
+  position:absolute;
+  top:-9999px;
+}
+.rate:not(:checked) > label {
+  float:left;
+  width:3em;
+  overflow:hidden;
+  white-space:nowrap;
+  cursor:pointer;
+  font-size:90px;
+  color:#ccc;
+}
+.rate:not(:checked) > label:before {
+  content: '★ ';
+}
+.rate > input:checked ~ label {
+  color: #ffc700;
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+  color: #deb217;
+}
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+  color: #c59b08;
+}
+
+
+
+</style>
+
+{% endblock content %}

@@ -1,0 +1,674 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load static %}
+{% block content %}
+<!-- FLASHNEWS -->
+
+<div class="flashnews">
+	<div class="flashnews-br">
+		Flash News
+	</div>
+	<div class="flashnews-update">
+		<marquee behavior="" direction="">
+			<span><i class="fa fa-circle" aria-hidden="true"></i> <a href="">{{flash_news.content}}</a></span>
+			<span><i class="fa fa-circle" aria-hidden="true"></i> <a href="">{{flash_news.content}}</a></span>
+		</marquee>
+	</div>
+</div>
+<!-- CAROUSEL -->
+
+
+<!-- WELCOM -->
+<div class="container" id="wlcome">
+	<div class="col-md-12">
+		<div class="wlcm" data-aos="fade-in" data-aos-duration="1500">
+			<br><br><br>
+			<b><h4>Welcome to MUSLIM ASSOCIATION COLLEGE</h4></b><br>
+			<p>We always provide everyone with education that exceeds expectations
+
+				MACE transforms youngsters who arrive at our campus, to astute professionals who could redefine the
+				future of the engineering world. We equip our students with the core skills required for successful
+				engineering careers.In an era of ever evolving technological advancements, we help our students to stay
+				ahead of the curve and to stay relevant</p>
+			<!-- <a class="more align-right" href="https://tkmim.ac.in/welcome-to-tim/">Read More <i class="fa fa-hand-o-right"></i></a>             -->
+		</div>
+	</div>
+</div>
+
+<!-- FOUNDERS -->
+{% comment %}
+<div class="container">
+	<div class="row">
+		<div class="col-md-12 col-lg-4 " data-aos="fade-in" data-aos-duration="1500">
+			<div class="cc3">
+				<h2>Our Founder</h2>
+				<p>Janab A.Thangal Kunju Musaliar&nbsp;was born in a middle class family at the ancestral home of his
+					parents at Kollam on 12th January 1897. His family proudly trace their ancestry to Malik ibu Deenar,
+					a...</p><a class="more alignleft" href="">Read More <i class="fa fa-hand-o-right"></i></a>
+				<div class="cc3-det">
+					<div class="row">
+						<div class="round-thumb col-md-2 col-2">
+							<img width="120" height="120"
+								src="https://tkmim.ac.in/wp-content/uploads/2016/03/Thangalkunjumusaliyar-120x120.jpg"
+								class="attachment-thumbnail size-thumbnail wp-post-image" alt="" decoding="async"
+								loading="lazy"
+								srcset="https://tkmim.ac.in/wp-content/uploads/2016/03/Thangalkunjumusaliyar-120x120.jpg 120w, https://tkmim.ac.in/wp-content/uploads/2016/03/Thangalkunjumusaliyar-300x300.jpg 300w, https://tkmim.ac.in/wp-content/uploads/2016/03/Thangalkunjumusaliyar-1200x1200.jpg 1200w, https://tkmim.ac.in/wp-content/uploads/2016/03/Thangalkunjumusaliyar-100x100.jpg 100w, https://tkmim.ac.in/wp-content/uploads/2016/03/Thangalkunjumusaliyar.jpg 1600w"
+								sizes="(max-width: 120px) 85vw, 120px" />
+						</div>
+						<div class="col-md-10 col-10">
+							<p>Thangal Kunju Musaliar</p>
+							<span>
+								<p>Founder</p>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-12 col-lg-4 " data-aos="fade-in" data-aos-duration="1500">
+			<div class="cc3">
+				<h2>Our Chairman</h2>
+				<p>Keeping in tune with the legacy of our Founder, we at TKM College Trust firmly believe that we should
+					always do the utmost without compromising on our ideals and goals. The TKM Institute of
+					Management...</p><a class="more alignleft" href="">Read More <i class="fa fa-hand-o-right"></i></a>
+				<div class="cc3-det">
+					<div class="row">
+						<div class="round-thumb col-md-2 col-2">
+							<img width="120" height="120"
+								src="https://tkmim.ac.in/wp-content/uploads/2023/01/tkmim_chairman-120x120.jpg"
+								class="attachment-thumbnail size-thumbnail wp-post-image" alt="" decoding="async"
+								loading="lazy"
+								srcset="https://tkmim.ac.in/wp-content/uploads/2023/01/tkmim_chairman-120x120.jpg 120w, https://tkmim.ac.in/wp-content/uploads/2023/01/tkmim_chairman-100x100.jpg 100w, https://tkmim.ac.in/wp-content/uploads/2023/01/tkmim_chairman.jpg 262w"
+								sizes="(max-width: 120px) 85vw, 120px" />
+						</div>
+						<div class="col-md-10 col-10">
+							<p>Shahal H Musaliar</p>
+							<span>
+								<p>Chairman</p>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-12 col-lg-4 " data-aos="fade-in" data-aos-duration="1500">
+			<div class="cc3">
+				<h2>Director&#8217;s Message</h2>
+				<p>Dr. Leading change in the current century is shaped by the rapid technological change that is
+					impacting each one of us. At TIM, we endeavor to provide industrially relevant education in the
+					swiftly transforming...</p><a class="more alignleft" href="">Read More <i
+						class="fa fa-hand-o-right"></i></a>
+				<div class="cc3-det">
+					<div class="row">
+						<div class="round-thumb col-md-2 col-2">
+							<img width="120" height="120" src=""
+								class="attachment-thumbnail size-thumbnail wp-post-image" alt="" decoding="async"
+								loading="lazy" />
+						</div>
+						<div class="col-md-10 col-10">
+							<p>Dr. </p>
+							<span>
+								<p>Director</p>
+							</span>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</div>
+
+{% endcomment %}
+
+
+<!-- NEWS -->
+<div class="news">
+	<div class="container">
+		<div class="section-title">
+			<h5>News & Events</h5>
+			<p>We list our campus stories here..</p>
+		</div>
+		<div class="row" data-aos="fade-in" data-aos-duration="1500">
+			<div class="col-md-6">
+				<div class="main-news">
+					<div class="main-news-img">
+						<img src="{% static 'images/Screenshot 2023-05-01 003635.png' %}">
+					</div>
+					<h4><a href=""><i class="fa fa-tag" aria-hidden="true"></i>16 th CONVOCATION CEREMONEY AT MACE CAMPUS</a></h4>
+					<div class="news-date">
+						<ul>
+							<li>
+								<i class="fa fa-calendar" aria-hidden="true"></i>
+								<span>10-Jan-2022</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="ne-list">
+					{% for news_event in news_events %}
+					<div class="news-list even">
+						<div class="row">
+							<div class="col-md-3 col-lg-2 col-3">
+								<div class="news-cal">
+									{% if news_event.image %}
+									<img width="120" height="120" src="{{news_event.image.url}}"
+										class="attachment-thumbnail size-thumbnail wp-post-image" alt=""
+										decoding="async" loading="lazy" />
+								</div>
+								{% endif %}
+							</div>
+							<div class="col-md-9 col-lg-10 col-9">
+								<div class="evnt-title">
+									<h4><a href=""><i class="fa fa-tag" aria-hidden="true"> </i>
+											{{news_event.content}}</a></h4>
+								</div>
+								<div class="evnt-tag">
+									<p>
+										<i class="fa fa-calendar" aria-hidden="true"></i>
+										<span>{{news_event.date}}</span>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					{% endfor %}
+				</div>
+<!--				<div class="news-list-btn">-->
+<!--					<a href="" class="view-more align-right"><button>View All News</button></a>-->
+<!--				</div>-->
+
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+<!-- PLACEMENTS -->
+<div class="placement">
+	<div class="container">
+		<div class="section-title">
+			<h5>Placements</h5>
+			<p>Students placed from our campus..</p>
+		</div>
+		<div class="row" data-aos="fade-in" data-aos-duration="1500">
+			<div id="placed" class="owl-carousel owl-theme">
+				{% for placement in placements %}
+				<div class="item">
+					<div class="place-detail">
+						<div class="place-img">
+							{% if placement.image %}
+							<img width="175" height="175" src="{{placement.image.url}}"
+								class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt=""
+								decoding="async" loading="lazy" srcset="" />
+							{% endif %}
+						</div>
+						<h5>{{placement.name}}</h5>
+						<p>{{placement.designation}}</p>
+					</div>
+				</div>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+<!-- LIFE AT TIM -->
+{% comment %}
+<div class="tim">
+	<div class="container">
+		<div class="section-title">
+			<h5>Life At MACE</h5>
+			<p>How our students enjoy here..</p>
+		</div>
+		<div class="row" data-aos="fade-in" data-aos-duration="1500">
+			<div id="tim" class="owl-carousel owl-theme">
+				{% for life_tim in life_tims %}
+
+				<div class="item">
+					<a href="#">
+						<div class="tim-l">
+							<div class="tim-img">
+								{% if life_tim.image %}
+								<img width="1200" height="800" src=""
+									class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt=""
+									decoding="async" loading="lazy" />
+							</div>
+							{% endif %}
+							<h5>{{life_tim.name}}</h5>
+						</div>
+					</a>
+				</div>
+
+				{% endfor %}
+
+			</div>
+		</div>
+	</div>
+</div>
+{% endcomment %}
+<!-- TESTIMONIAL -->
+<div class="testimonial">
+	<div class="container" data-aos="fade-in" data-aos-duration="1500">
+		<div class="section-title">
+			<h5>Testimonial</h5>
+			<p>What others say about us</p>
+		</div>
+		<div class="row">
+			<div class="col-sm-12 col-md-12 col-lg-6 col-xl-6">
+				<div class="test-hd">
+					<h4>By Alumni</h4>
+				</div>
+				<div class="testi">
+					<div class="slider-one">
+						<div class="test-cont">
+							<p>Extremely interactive and enthusiastic students. Had a great experience. Kudos to the
+								faculty and Corporate Relations team.</p>
+							<h3>Divya Dhall</h3>
+							<h4>Talent Acquisition - Colgate Palmolive</h4>
+						</div>
+						<div class="test-cont">
+							<p>I am impressed by the wonderful infrastructure and facilities of the Institute and the
+								quality of the faculty and students who are given opportunities for self development
+								outside the curriculum too.</p>
+							<h3>L Radhakrishnan</h3>
+							<h4>Advisor to the Chief Minister, Kerala - Kerala Government</h4>
+						</div>
+						<div class="test-cont">
+							<p>We have hired students from the school and they have been good contributors. Some of them
+								have been exceptional. The students have good basics and are grounded and have less of
+								the unreal expectations many MBA’s seem to have these days.</p>
+							<h3>Chandrasekhar Padmakumar</h3>
+							<h4>CMD - Terumo Penpol</h4>
+						</div>
+						<div class="test-cont">
+							<p>Great infrastructure. All the best! Hope the students keep the name of TIM high.</p>
+							<h3>Manu Mahdi</h3>
+							<h4>General Manager - Sharp Electronics , Dubai, UAE; TIM Alumni.</h4>
+						</div>
+						<div class="test-cont">
+							<p>Enjoyed inaugurating the seminar on Technology &amp; Leadership. Impressive atmosphere
+								and attentive students.</p>
+							<h3>T P Srinivasan</h3>
+							<h4></h4>
+						</div>
+						<div class="test-cont">
+							<p>Great experience interacting with the students and management of TIM. Thank you for the
+								welcome and the opportunity. Its been a privilege.</p>
+							<h3>Arun Tharakan</h3>
+							<h4></h4>
+						</div>
+						<div class="test-cont">
+							<p>Great facilities. Very good students with great prospects.</p>
+							<h3>Hari Nair</h3>
+							<h4></h4>
+						</div>
+						<div class="test-cont">
+							<p>Very good environment, professional , neatly managed. Students are professional with
+								pleasing attitude having very good knowledge.</p>
+							<h3>Leena S Varma</h3>
+							<h4></h4>
+						</div>
+						<div class="test-cont">
+							<p>Thanks a ton for the experience! It was a great pleasure and I ‘m humbled by this
+								experience. Thanks.</p>
+							<h3>William Martin</h3>
+							<h4></h4>
+						</div>
+					</div>
+				</div>
+				<div class="slider-one-sub">
+					<div class="testi-slide">
+						<h3></h3>
+						<div class="testi-img">
+							<img width="120" height="120" src=""
+								class="attachment-testiThumb size-testiThumb wp-post-image" alt="" decoding="async"
+								loading="lazy"
+								srcset="https://tkmim.ac.in/wp-content/uploads/2016/03/Divya-Dhall-120x120.jpg 120w, https://tkmim.ac.in/wp-content/uploads/2016/03/Divya-Dhall-100x100.jpg 100w, https://tkmim.ac.in/wp-content/uploads/2016/03/Divya-Dhall.jpg 200w"
+								sizes="(max-width: 120px) 85vw, 120px" />
+						</div>
+					</div>
+					<div class="testi-slide">
+						<h3></h3>
+						<div class="testi-img">
+							<img class="no-prof-img" src="" alt="no profile image" />
+						</div>
+					</div>
+					<div class="testi-slide">
+						<h3></h3>
+						<div class="testi-img">
+							<img width="120" height="120" src=""
+								class="attachment-testiThumb size-testiThumb wp-post-image" alt="" decoding="async"
+								loading="lazy" />
+						</div>
+					</div>
+					<div class="testi-slide">
+						<h3></h3>
+						<div class="testi-img">
+							<img width="120" height="120"
+								src="https://tkmim.ac.in/wp-content/uploads/2016/03/Manu-120x120.jpg"
+								class="attachment-testiThumb size-testiThumb wp-post-image" alt="" decoding="async"
+								loading="lazy" />
+						</div>
+					</div>
+					<div class="testi-slide">
+						<h3></h3>
+						<div class="testi-img">
+							<img width="120" height="120"
+								src="https://tkmim.ac.in/wp-content/uploads/2016/03/tp_srinivasan-120x120.jpg"
+								class="attachment-testiThumb size-testiThumb wp-post-image" alt="" decoding="async"
+								loading="lazy" />
+						</div>
+					</div>
+					<div class="testi-slide">
+						<h3></h3>
+						<div class="testi-img">
+							<img width="120" height="120"
+								src="https://tkmim.ac.in/wp-content/uploads/2016/03/Arun_tharakan-120x120.jpg"
+								class="attachment-testiThumb size-testiThumb wp-post-image" alt="" decoding="async"
+								loading="lazy" />
+						</div>
+					</div>
+					<div class="testi-slide">
+						<h3></h3>
+						<div class="testi-img">
+							<img width="120" height="120"
+								src="https://tkmim.ac.in/wp-content/uploads/2016/03/Hari_Krishnan_R_Nair-120x120.jpg"
+								class="attachment-testiThumb size-testiThumb wp-post-image" alt="" decoding="async"
+								loading="lazy" />
+						</div>
+					</div>
+					<div class="testi-slide">
+						<h3></h3>
+						<div class="testi-img">
+							<img width="120" height="120"
+								src="https://tkmim.ac.in/wp-content/uploads/2016/03/Leena-S-Varma-120x120.jpg"
+								class="attachment-testiThumb size-testiThumb wp-post-image" alt="" decoding="async"
+								loading="lazy"
+								srcset="https://tkmim.ac.in/wp-content/uploads/2016/03/Leena-S-Varma-120x120.jpg 120w, https://tkmim.ac.in/wp-content/uploads/2016/03/Leena-S-Varma-100x100.jpg 100w, https://tkmim.ac.in/wp-content/uploads/2016/03/Leena-S-Varma.jpg 200w"
+								sizes="(max-width: 120px) 85vw, 120px" />
+						</div>
+					</div>
+					<div class="testi-slide">
+						<h3></h3>
+						<div class="testi-img">
+							<img width="120" height="120"
+								src="https://tkmim.ac.in/wp-content/uploads/2016/03/William_Martin-120x120.jpg"
+								class="attachment-testiThumb size-testiThumb wp-post-image" alt="" decoding="async"
+								loading="lazy" />
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-sm-12 col-md-12 col-lg-6 col-xl-6">
+				<div class="test-hd">
+					<h4>By Recruiters</h4>
+				</div>
+				<span>
+					<div class="testi">
+						<div class="slider-two">
+							<div class="test-cont" >
+								<p style="font-color:blue;">&nbsp;We have hired students from the school and they have been good contributors. Some of them
+								have been exceptional. The students have good basics and are grounded and have less of
+								the unreal expectations many MBA’s seem to have these days</p>
+								<h3>Mahindra</h3>
+							</div>
+							<div class="test-cont">
+								<p>&nbsp;We have hired students from the school and they have been good contributors. Some of them
+								have been exceptional. The students have good basics and are grounded and have less of
+								the unreal expectations many MBA’s seem to have these days</p>
+								<h3>EY</h3>
+							</div>
+							<div class="test-cont">
+								<p>&nbsp;We have hired students from the school and they have been good contributors. Some of them
+								have been exceptional. The students have good basics and are grounded and have less of
+								the unreal expectations many MBA’s seem to have these days</p>
+								<h3>ITC</h3>
+							</div>
+							<div class="test-cont">
+								<p>&nbsp;We have hired students from the school and they have been good contributors. Some of them
+								have been exceptional. The students have good basics and are grounded and have less of
+								the unreal expectations many MBA’s seem to have these days</p>
+								<h3>Axis</h3>
+							</div>
+							<div class="test-cont">
+								<p>&nbsp;We have hired students from the school and they have been good contributors. Some of them
+								have been exceptional. The students have good basics and are grounded and have less of
+								the unreal expectations many MBA’s seem to have these days</p>
+								<h3>SBI</h3>
+							</div>
+							<div class="test-cont">
+								<p>&nbsp;We have hired students from the school and they have been good contributors. Some of them
+								have been exceptional. The students have good basics and are grounded and have less of
+								the unreal expectations many MBA’s seem to have these days</p>
+								<h3>Deloitte</h3>
+							</div>
+							<div class="test-cont">
+								<p>&nbsp;We have hired students from the school and they have been good contributors. Some of them
+								have been exceptional. The students have good basics and are grounded and have less of
+								the unreal expectations many MBA’s seem to have these days</p>
+								<h3>TATA</h3>
+							</div>
+						</div>
+					</div>
+				</span>
+				<div class="slider-two-sub">
+					<div class="testi-slide">
+						<h3></h3>
+						<div class="testi-img">
+							<img width="421" height="120"
+								src="https://tkmim.ac.in/wp-content/uploads/2021/11/MAHINDRA.png"
+								class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt=""
+								decoding="async" loading="lazy"
+								srcset="https://tkmim.ac.in/wp-content/uploads/2021/11/MAHINDRA.png 421w, https://tkmim.ac.in/wp-content/uploads/2021/11/MAHINDRA-300x86.png 300w, https://tkmim.ac.in/wp-content/uploads/2021/11/MAHINDRA-120x34.png 120w, https://tkmim.ac.in/wp-content/uploads/2021/11/MAHINDRA-200x57.png 200w"
+								sizes="(max-width: 709px) 85vw, (max-width: 909px) 67vw, (max-width: 1362px) 88vw, 1200px" />
+						</div>
+					</div>
+					<div class="testi-slide">
+						<h3></h3>
+						<div class="testi-img">
+							<img width="499" height="173" src="https://tkmim.ac.in/wp-content/uploads/2016/03/ey.jpg"
+								class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt=""
+								decoding="async" loading="lazy"
+								srcset="https://tkmim.ac.in/wp-content/uploads/2016/03/ey.jpg 499w, https://tkmim.ac.in/wp-content/uploads/2016/03/ey-300x104.jpg 300w, https://tkmim.ac.in/wp-content/uploads/2016/03/ey-120x42.jpg 120w, https://tkmim.ac.in/wp-content/uploads/2016/03/ey-200x69.jpg 200w"
+								sizes="(max-width: 709px) 85vw, (max-width: 909px) 67vw, (max-width: 1362px) 88vw, 1200px" />
+						</div>
+					</div>
+					<div class="testi-slide">
+						<h3></h3>
+						<div class="testi-img">
+							<img width="1024" height="1066" src="https://tkmim.ac.in/wp-content/uploads/2016/03/ITC.png"
+								class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="ITC"
+								decoding="async" loading="lazy"
+								srcset="https://tkmim.ac.in/wp-content/uploads/2016/03/ITC.png 1024w, https://tkmim.ac.in/wp-content/uploads/2016/03/ITC-288x300.png 288w, https://tkmim.ac.in/wp-content/uploads/2016/03/ITC-115x120.png 115w, https://tkmim.ac.in/wp-content/uploads/2016/03/ITC-96x100.png 96w"
+								sizes="(max-width: 709px) 85vw, (max-width: 909px) 67vw, (max-width: 1362px) 88vw, 1200px" />
+						</div>
+					</div>
+					<div class="testi-slide">
+						<h3></h3>
+						<div class="testi-img">
+							<img width="499" height="173" src="https://tkmim.ac.in/wp-content/uploads/2016/03/axis.jpg"
+								class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt=""
+								decoding="async" loading="lazy"
+								srcset="https://tkmim.ac.in/wp-content/uploads/2016/03/axis.jpg 499w, https://tkmim.ac.in/wp-content/uploads/2016/03/axis-300x104.jpg 300w, https://tkmim.ac.in/wp-content/uploads/2016/03/axis-120x42.jpg 120w, https://tkmim.ac.in/wp-content/uploads/2016/03/axis-200x69.jpg 200w"
+								sizes="(max-width: 709px) 85vw, (max-width: 909px) 67vw, (max-width: 1362px) 88vw, 1200px" />
+						</div>
+					</div>
+					<div class="testi-slide">
+						<h3></h3>
+						<div class="testi-img">
+							<img width="499" height="173" src="https://tkmim.ac.in/wp-content/uploads/2016/03/sbi.jpg"
+								class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt=""
+								decoding="async" loading="lazy"
+								srcset="https://tkmim.ac.in/wp-content/uploads/2016/03/sbi.jpg 499w, https://tkmim.ac.in/wp-content/uploads/2016/03/sbi-300x104.jpg 300w, https://tkmim.ac.in/wp-content/uploads/2016/03/sbi-120x42.jpg 120w, https://tkmim.ac.in/wp-content/uploads/2016/03/sbi-200x69.jpg 200w"
+								sizes="(max-width: 709px) 85vw, (max-width: 909px) 67vw, (max-width: 1362px) 88vw, 1200px" />
+						</div>
+					</div>
+					<div class="testi-slide">
+						<h3></h3>
+						<div class="testi-img">
+							<img width="499" height="173"
+								src="https://tkmim.ac.in/wp-content/uploads/2016/03/delotte.jpg"
+								class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt=""
+								decoding="async" loading="lazy"
+								srcset="https://tkmim.ac.in/wp-content/uploads/2016/03/delotte.jpg 499w, https://tkmim.ac.in/wp-content/uploads/2016/03/delotte-300x104.jpg 300w, https://tkmim.ac.in/wp-content/uploads/2016/03/delotte-120x42.jpg 120w, https://tkmim.ac.in/wp-content/uploads/2016/03/delotte-200x69.jpg 200w"
+								sizes="(max-width: 709px) 85vw, (max-width: 909px) 67vw, (max-width: 1362px) 88vw, 1200px" />
+						</div>
+					</div>
+					<div class="testi-slide">
+						<h3></h3>
+						<div class="testi-img">
+							<img width="330" height="153" src="https://tkmim.ac.in/wp-content/uploads/2016/03/tata.jpg"
+								class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt=""
+								decoding="async" loading="lazy"
+								srcset="https://tkmim.ac.in/wp-content/uploads/2016/03/tata.jpg 330w, https://tkmim.ac.in/wp-content/uploads/2016/03/tata-300x139.jpg 300w, https://tkmim.ac.in/wp-content/uploads/2016/03/tata-120x56.jpg 120w, https://tkmim.ac.in/wp-content/uploads/2016/03/tata-200x93.jpg 200w"
+								sizes="(max-width: 709px) 85vw, (max-width: 909px) 67vw, (max-width: 1362px) 88vw, 1200px" />
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+<!-- RECRUITERS -->
+<div class="recruiter">
+	<div class="container">
+		<div class="section-title">
+			<h5>Recruiters & Associate</h5>
+			<p>Top Recruiters in our campus..</p>
+		</div>
+		<div class="row" data-aos="fade-in" data-aos-duration="1500">
+			<div class="col-lg-3 col-md-3 col-3">
+				<div class="rec-img">
+					<img src="https://tkmim.ac.in/wp-content/uploads/2023/01/NOKIA.webp" alt="TIM" width="35%">
+				</div>
+			</div>
+			<div class="col-lg-3 col-md-3 col-3">
+				<div class="rec-img">
+					<img src="https://tkmim.ac.in/wp-content/uploads/2023/01/samsung.png" alt="TIM" width="35%">
+				</div>
+			</div>
+			<div class="col-lg-3 col-md-3 col-3">
+				<div class="rec-img">
+					<img src="https://tkmim.ac.in/wp-content/uploads/2023/01/colgatepalmolive.png" alt="TIM"
+						width="35%">
+				</div>
+			</div>
+			<div class="col-lg-3 col-md-3 col-3">
+				<div class="rec-img">
+					<img src="https://tkmim.ac.in/wp-content/uploads/2023/01/ITC.png" alt="TIM" width="35%">
+				</div>
+			</div>
+			<div class="col-lg-3 col-md-3 col-3">
+				<div class="rec-img">
+					<img src="https://tkmim.ac.in/wp-content/uploads/2023/01/nestle.jpg" alt="TIM" width="35%">
+				</div>
+			</div>
+
+			<div class="col-lg-3 col-md-3 col-3">
+				<div class="rec-img">
+					<img src="https://tkmim.ac.in/wp-content/uploads/2023/01/amazon.webp" alt="TIM" width="35%">
+				</div>
+			</div>
+			<div class="col-lg-3 col-md-3 col-3">
+				<div class="rec-img">
+					<img src="https://tkmim.ac.in/wp-content/uploads/2023/01/Deloitte.png" alt="TIM" width="35%">
+				</div>
+			</div>
+			<div class="col-lg-3 col-md-3 col-3">
+				<div class="rec-img">
+					<img src="https://tkmim.ac.in/wp-content/uploads/2023/01/Byjus-Logo.png" alt="TIM" width="35%">
+				</div>
+			</div>
+			<div class="col-lg-3 col-md-3 col-3">
+				<div class="rec-img">
+					<img src="https://tkmim.ac.in/wp-content/uploads/2023/01/google.jpg" alt="TIM" width="35%">
+				</div>
+			</div>
+			<div class="col-lg-3 col-md-3 col-3">
+				<div class="rec-img">
+					<img src="https://tkmim.ac.in/wp-content/uploads/2023/01/kpmg.png" alt="TIM" width="35%">
+				</div>
+			</div>
+
+			<div class="col-lg-3 col-md-3 col-3">
+				<div class="rec-img">
+					<img src="https://tkmim.ac.in/wp-content/uploads/2023/01/south-indian-bank.png" alt="TIM"
+						width="35%">
+				</div>
+			</div>
+			<div class="col-lg-3 col-md-3 col-3">
+				<div class="rec-img">
+					<img src="https://tkmim.ac.in/wp-content/uploads/2023/01/yes_bank.png" alt="TIM" width="35%">
+				</div>
+			</div>
+			<div class="col-lg-3 col-md-3 col-3">
+				<div class="rec-img">
+					<img src="https://tkmim.ac.in/wp-content/uploads/2023/01/uae-exchange.png" alt="TIM" width="35%">
+				</div>
+			</div>
+			<div class="col-lg-3 col-md-3 col-3">
+				<div class="rec-img">
+					<img src="https://tkmim.ac.in/wp-content/uploads/2023/01/icici.png" alt="TIM" width="35%">
+				</div>
+			</div>
+			<div class="col-lg-3 col-md-3 col-3">
+				<div class="rec-img">
+					<img src="https://tkmim.ac.in/wp-content/uploads/2023/01/axis.png" alt="TIM" width="35%">
+				</div>
+			</div>
+
+			<br>
+			<div class="button">
+				<br>
+				<a href="">View More</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- CTA -->
+<div id="stickyAdmission">
+	<a href="{% url 'web:admission_information' %}">Admissions 2023</a>
+</div>
+<div class="main-em-btn">
+	<button class="mainbtn"><i class="fa fa-download" aria-hidden="true"></i></i></button>
+	<span>
+		<button class="mainclosebtn"><i class="fa fa-times" aria-hidden="true"></i></button>
+	</span>
+	<div class="main-em-lis">
+		<ul id="menu-sticky-menu" class="sticky-menu">
+			<li id="menu-item-3691" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-3691">
+				<a href="https://tkmim.ac.in/category/newsletters/">Download Newsletters</a></li>
+			<li id="menu-item-3692" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3692"><a
+					href="">Download Brochures</a></li>
+		</ul>
+	</div>
+</div>
+<!-- SEARCH BUTTON -->
+
+<div class="search-blk">
+	<button class="search-ico"><i class="fa fa-search" aria-hidden="true"></i></button>
+
+</div>
+<div class="search-input">
+	<form role="search" method="get" class="search-form" action="https://tkmim.ac.in/">
+		<input type="search" class="search-field" placeholder="Search &hellip;" value="" name="s" title="Search for:" />
+	</form>
+</div>
+<!--  -->
+<a href="whatsapp://send?phone=919074544495&text=Hi" class="float-wa" target="_blank">
+	<i class="fa fa-whatsapp my-float"></i>
+</a>
+<style>
+	.red {
+		color: rgb(220, 0, 0);
+	}
+</style>
+
+{% endblock content %}

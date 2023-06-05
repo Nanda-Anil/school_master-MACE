@@ -1,0 +1,159 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load static %}
+{% load static %}
+{% block content %}
+
+<div class="page-title">
+	<div class="container">
+		<h2>Online Grievances Redressal</h2>
+		<div class="breadcrumb">
+			<ul class="breadcrumb">
+				<!-- Breadcrumb NavXT 7.2.0 -->
+				<span property="itemListElement" typeof="ListItem"><i class="fa fa-home"></i><a property="item"
+						typeof="WebPage" title="Go to TKM Institute of Management." href="{%  url 'web:index' %}"
+						class="home"><span property="name">Home</span></a>
+					<meta property="position" content="1">
+				</span><i class="fa fa-angle-right"></i><span property="itemListElement" typeof="ListItem"><span
+						property="name">Academics</span>
+					<meta property="position" content="2">
+				</span>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<div class="main-content-complaint">
+	<div class="container cu-cont">
+
+        <section class="container-fluid">
+            <div class="container" style="margin-bottom:50px; margin-top:50px; background: #001845;">
+                <div class="row footerblock">
+                    <div class="">
+                        <label class="greenfont" style="color:#fff;">Feel Free to Share your Complaints</label>
+                        <h2 class="heading1" style="color:#fff;">Grievances Redressal</h2>
+                        <div class="alert alert-success" role="alert" id="alert" style="display:none;">
+                          <p id="success">We appreciate you contacting us MACE. One of our colleagues will get back in touch with you soon!</p>
+                        </div>
+                        {% comment %} <form id="grievances" action="grievances_mail.php" method="POST" novalidate="novalidate">
+                            <input placeholder="Name" name="cname">
+                            <input placeholder="Email" name="cemail">
+                            <input placeholder="Phone" name="cphone">
+                            <textarea placeholder="Message.." name="cmsg" required=""></textarea>
+                            <button class="green-btn" style="margin:0 auto;">Submit</button>
+                            <i class="d-block mt-3" style="color: #fff;">*Name, Email, Phone is not Mandatory*</i>
+                        </form> {% endcomment %}
+                         
+                    </div>
+                </div>
+            </div>
+
+			<div class="pd-p-complaint">
+				<div class="container cu-cont">
+					<form id="applyOnline" method="POST" action="" enctype="multipart/form-data" novalidate="novalidate" data-url="{% url 'web:complaint_form' %}">
+						{% csrf_token %}
+						<fieldset>
+							<section class="row">
+								<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+									<label>Name</label> 
+									<input type="text" name="oa-name" value="" tabindex="1">
+									<label>Email</label>
+									<input type="text" class="email" name="oa-email-per" tabindex="15">
+									<label>Phone</label> 
+									<input class="number" maxlength="11" minlength="10" type="text" name="oa-phone-per" tabindex="16">
+								</div>
+								<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+									<label>Message</label><span class='required-star'>*</span>
+									<textarea class="required" name="oa-message" value="" maxlength="300" tabindex="13"></textarea>
+								</div>
+							</section>
+				
+						
+							<section class="row">
+								<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+									<label></label>
+									<input id="regSubmit" type="submit" name="submit" value="Submit Form" class="button" tabindex="83">
+									<div class="tinyLoader"></div>
+								</div>
+							</section>
+						</fieldset>
+					</form>
+			
+					<link href="{% static 'css/toastr.css' %}" rel="stylesheet" type="text/css" id="app-dark-stylesheet" />
+
+					<script src="{% static 'js/toastr.min.js' %}"></script>
+					<script type="text/javascript">
+						$(document).ready(function() {  
+
+							$( ".dp11111").datepicker({
+								dateFormat: 'YY-MM-DD',
+								changeYear: true,
+								minDate: "-5Y",
+							});
+							$( ".yr1111" ).datepicker({dateFormat: 'YY',  changeYear: true,  changeMonth: false});
+							$('.tinyLoader').hide();
+							var ajaxurl = $('#applyOnline').attr('data-url');
+							var zsoptions = {
+								url: ajaxurl,
+								target:'#regResponse',
+								dataType: 'json', // set the expected data type to JSON
+								beforeSubmit:function(){
+									var res=$('#applyOnline').validate().numberOfInvalids();
+									if(res==0){
+										$(".tinyLoader").show();
+										$('#regResponse').empty();
+										return true;
+									} else {
+										return false;
+									}
+								},
+								success:function(data){
+									console.log(data.success); // logs the success flag from the response
+									console.log(data.message); // logs the message from the response
+									$('.tinyLoader').hide();
+									$('#applyOnline')[0].reset(); // reset the form fields
+
+									toastr.success(data.message, 'Success', {
+										closeButton: true,
+										progressBar: true,
+										positionClass: 'toast-top-right',
+										timeOut: 3000,
+									});
+
+								},
+								error:function(xhr, status, error){ // handle errors
+									console.log(xhr); // log the full response object
+									console.log(status); // log the status code
+									console.log(error); // log the error message
+								},
+								data : { action : 'submitTOA' }
+							};
+							$('#applyOnline').ajaxForm(zsoptions);
+					
+						});
+					</script>
+				</div>
+			</div>
+        </section>
+
+		<!-- /wp:columns -->
+
+		<!-- wp:buttons -->
+		<div class="wp-block-buttons"></div>
+		<!-- /wp:buttons -->
+	</div>
+</div>
+<style type="text/css">
+.footerblock{
+	justify-content:center;
+	padding-top:20px;
+}
+.main-content-complaint {
+    margin: 20px 0;
+}
+.pd-p-complaint {
+    margin-top: 4%;
+    margin-bottom: 4%;
+}
+</style>
+{% endblock %}

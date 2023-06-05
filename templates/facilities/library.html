@@ -1,0 +1,144 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load static %}
+{% load static %}
+{% block content %}
+
+<div class="page-title">
+	<div class="container">
+		<h2>Library</h2>
+		<div class="breadcrumb">
+			<ul class="breadcrumb">
+				<!-- Breadcrumb NavXT 7.2.0 -->
+				<span property="itemListElement" typeof="ListItem"><i class="fa fa-home"></i><a property="item"
+						typeof="WebPage" title="Go to TKM Institute of Management." href="{%  url 'web:index' %}"
+						class="home"><span property="name">Home</span></a>
+					<meta property="position" content="1">
+				</span><i class="fa fa-angle-right"></i><span property="itemListElement" typeof="ListItem"><span
+						property="name">Facilities</span>
+					<meta property="position" content="2">
+				</span>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<div class="main-content">
+	<div class="container cu-cont">
+
+        <section class="container-fluid section">
+            <div class="container">
+                <div class="row align-items-center">
+                    
+                    <div class="col-12">
+                        <h2 class="heading1">About</h2>
+                        <p>Muslim Association College of Engineering (MACE) is proud of having an aesthetically designed, elegantly furnished modern library that has a large collection of Technical Reference Books, National and International Journals, Online Journals, CDs, Periodicals, Magazines etc.</p>
+                    </div>
+
+                    <div class="col-12">
+                        <h3 class="tablehead">Library Staff</h3>
+                        <div id="placed" class="owl-carousel owl-theme owl-loaded owl-drag">
+
+                            <div class="faculty_card">
+                                <div class="faculty_img_wrap">
+                                    <img src="{% static 'images/dummy.jpg' %}" alt="">
+                                </div>
+                                <h2 class="heading3">Sandhya S </h2>
+                                    <p>AMA, BEd, CLISc, BLISc, MLISc</p>
+                                    <label class="greenfont">Librarian</label>
+                            </div>
+
+                            <div class="faculty_card">
+                                <div class="faculty_img_wrap">
+                                    <img src="{% static 'images/dummy.jpg' %}" alt="">
+                                </div>
+                                <h2 class="heading3">Sherin Fathima </h2>
+                                <p>BA, PGDCA, CLISc</p>
+                                <label class="greenfont">Asst. Librarian</label>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    
+           
+                    
+                    <div class="col-12">
+                        <h3 class="tablehead">Service Rules</h3>
+                       
+                        <h2 class="heading3">Circulation &amp; Book Borrowing Privileges and Renewal</h2>
+                        <ul>
+                            <li>Faculty and all Teachers:    30 day loan; one renewal; 7 book limit;</li>
+                            <li>Non-Faculty Staff (only for part-time students):   30 day loan; one renewal; 3 book limit;</li>
+                            <li>Students:     10 day loan; two renewal; 3 book limit;</li>
+                        </ul>
+                        
+                        <h2 class="heading3">Borrowing Privileges for Reference Books &amp; Magazines</h2>
+                        <ul>
+                            <li>Reference books, Journals, project reports &amp; Newspapers are for IN-LIBRARY USE ONLY. </li>
+                            <li>Overnight Issue (24 hour loan): All teachers and students may borrow one copy of each of these materials for no longer than one day. The same must mandatorily be returned the next day morning before class. </li>
+                            <li>Classroom use: Reference materials may be borrowed for class room purpose and returned promptly after class use.</li>
+                        </ul>
+                        
+                        <h2 class="heading3">Reservation &amp; Recall</h2>
+                        <ul>
+                            <li>Users have right to reserve materials on first-come-first-serve basis. </li>
+                            <li>Reserve materials must be returned to the circulation desk from where they were borrowed. </li>
+                            <li>Material may be recalled at any time if it is needed for library reserve. </li>
+                             <li>Material may be recalled for use by another user after it has been circulated to a borrower for 7 days. </li>
+                              <li>User borrowing privileges will be suspended if recall notices are not honored within 7 days.</li>
+                        </ul>
+                        
+                        <h2 class="heading3">Library Class</h2>
+                        <p>Teachers should schedule the library period to bring students for library class/research/project work/check-in &amp; check-out of books. A library schedule form is with the Librarians to reserve library periods in advance. No instantaneous service is possible on short notice. Library class/service is an intellectual collaboration between users and the librarian for finding appropriate curriculum assigned information in a professional manner at scheduled time.</p>
+                        
+                        <h2 class="heading3">Return Fines, Lost &amp; Replacement costs</h2>
+                        <ul>
+                            <li>All materials issued to borrowers may be returned on due date. </li>
+                            <li>Fines are applied to borrowers who do not return books on the due date. </li>
+                            <li>The library borrower is responsible for the replacement cost of any item lost or irreparably-damaged during circulation. </li>
+                             <li>Replacement prices are based on the actual current cost for the materials in the market, plus overdue fines and processing charges. </li>
+                              <li>Extra fees/charges are added to the replacement cost. </li>
+                        </ul>
+                        
+                         <h2 class="heading3">Add in/out</h2>
+                        <p>Requests for adding/deleting new books/magazines should be forwarded to Librarian. Request forms, available with librarian, must be filled with appropriate information and submitted to the Librarian by hand or by mail at mailto:librarian@macev.org.</p>
+                        
+                         <h2 class="heading3">Complaints &amp; suggestions</h2>
+                        <p>Suggestions/Complaints are always welcome and must be forwarded to the Librarian in hand or the Principal.</p>
+                        
+                         <h2 class="heading3">Transfer of books and Use of Library</h2>
+                        <p>ID card is mandatory for all library use and transactions.  No transfer or subletting of Books after borrowing is allowed. Users may lose library privilege upon the misuse of library rules.</p>
+                        
+                    </div>
+                    
+                    <div class="col-12">
+                        <h3 class="tablehead">Rules &amp; Regulations</h3>
+                        <ul>
+                            <li>Student entry is permitted with ID card only. </li>
+                            <li>Textbooks, printed materials and issued books are not allowed to be taken inside the library </li>
+                            <li>All are requested to maintain absolute silence in and around the library. </li>
+                             <li>Mobile phones are to be in silent mode within the library. </li>
+                              <li>Members shall not write upon, damage or mark any book belonging to the library </li>
+                              <li>No personal belongings other than necessary notebooks are allowed inside the library </li>
+                              <li>The membership of any member found misbehaving in the library will be suspended.</li>
+                              <li>Refreshment of any kind shall not be taken anywhere in the library premises </li>
+                              <li>Library books and equipments are to be handled with care.</li>
+                              <li>Students caught tearing book pages or stealing books will be suspended forthwith from using the library facilities and disciplinary action will be recommended against them.</li>
+                              <li>Library and its premises should be kept absolutely clean and tidy. </li>
+                        </ul>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+		<!-- /wp:columns -->
+
+		<!-- wp:buttons -->
+		<div class="wp-block-buttons"></div>
+		<!-- /wp:buttons -->
+	</div>
+</div>
+
+{% endblock %}

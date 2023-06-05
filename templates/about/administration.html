@@ -1,0 +1,111 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load static %}
+{% load static %}
+{% block content %}
+
+<div class="page-title">
+	<div class="container">
+		<h2>Our Administration</h2>
+		<div class="breadcrumb">
+			<ul class="breadcrumb">
+				<!-- Breadcrumb NavXT 7.2.0 -->
+				<span property="itemListElement" typeof="ListItem"><i class="fa fa-home"></i><a property="item"
+						typeof="WebPage" title="Go to TKM Institute of Management." href="{%  url 'web:index' %}"
+						class="home"><span property="name">Home</span></a>
+					<meta property="position" content="1">
+				</span><i class="fa fa-angle-right"></i><span property="itemListElement" typeof="ListItem"><span
+						property="name">Our Administration</span>
+					<meta property="position" content="2">
+				</span>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<div class="main-content">
+	<div class="container cu-cont">
+
+        <section class="container-fluid section">
+            <div class="container">
+                <div class="row justify-content-center">
+                    
+                    <!--<div class="col-12 col-md-4 col-lg-3">-->
+                    <!--    <div class="faculty_card">-->
+                    <!--        <div class="faculty_img_wrap">-->
+                    <!--            <img src="img/abdul_raheed.jpg" alt="">-->
+                    <!--        </div>-->
+                            
+                    <!--        <h2 class="heading3">Prof. E Abdul Rasheed</h2>-->
+                    <!--        <p class="greenfont">Director</p>-->
+                    <!--    </div>-->
+                    <!--</div>-->
+                    
+                    <!--<div class="col-12 col-md-4 col-lg-3">-->
+                    <!--    <div class="faculty_card">-->
+                    <!--        <div class="faculty_img_wrap">-->
+                    <!--            <img src="img/dummy.jpg" alt="">-->
+                    <!--        </div>-->
+                            
+                    <!--        <h2 class="heading3">Dr. D P Balachandran</h2>-->
+                    <!--        <p class="greenfont">Principal</p>-->
+                    <!--    </div>-->
+                    <!--</div>-->
+
+            
+                    <div class="col-12 ">
+                     
+                        <p>Muslim Association College of Engineering, (MACE) Venjaramoodu, Thiruvananthapuram is managed by the Muslim Association, founded in 1956, on the initiative of a band of enlightened citizens of the capital city.The Muslim Association, through the years, has grown in to one of the premier cultural organizations of the State, whose contributions to the cause of education has been widely acknowledged. The Association’s main asset has always been a fast growing fraternity of members, many of whom occupy prominent positions in different professions, civil services, business, social and cultural fields.</p>
+                        
+                    </div>
+                    <div class="col-12">
+                        <h3 class="tablehead">Faculty</h3>
+                            <div id="placed" class="owl-carousel owl-theme owl-loaded owl-drag">
+                                <div class="faculty_card">
+                                    <div class="faculty_img_wrap">
+                                    <img src="{% static 'images/dhanya-m-s.jpg' %}" alt="">
+                                    </div>
+                                    <h2 class="heading3">Dhanya</h2>
+                                    <p>Asst. Professor</p>
+                                    <label class="greenfont">M.Tech</label>
+                                </div>
+                                <div class="faculty_card">
+                                    <div class="faculty_img_wrap">
+                                    <img src="{% static 'images/muhammed-rashid-a-t.jpg' %}" alt="">
+                                    </div>
+                                    <h2 class="heading3">Muhammed Rashid</h2>
+                                    <p>Asst. Professor</p>
+                                    <label class="greenfont">M.Tech (Structural Engineering) </label>
+                                </div>
+                                <div class="faculty_card">
+                                    <div class="faculty_img_wrap">
+                                    <img src="{% static 'images/geena-g-s.jpg' %}" alt="">
+                                    </div>
+                                    <h2 class="heading3">Geena G S</h2>
+                                    <p>Asst. Professor</p>
+                                    <label class="greenfont">M.Tech</label>
+                                </div>
+                                <div class="faculty_card">
+                                    <div class="faculty_img_wrap">
+                                    <img src="{% static 'images/dummy.jpg' %}" alt="">
+                                    </div>
+                                    <h2 class="heading3">Gayathri Devi</h2>
+                                    <p>Asst. Professor</p>
+                                    <label class="greenfont">M.Tech</label>
+                                </div>
+							</div>
+					</div>
+                </div>
+                
+               
+            </div>
+        </section>
+		<!-- /wp:columns -->
+
+		<!-- wp:buttons -->
+		<div class="wp-block-buttons"></div>
+		<!-- /wp:buttons -->
+	</div>
+</div>
+
+{% endblock %}

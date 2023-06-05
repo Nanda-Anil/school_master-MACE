@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load static %}
+{% load static %}
+{% block content %}
+
+<div class="page-title">
+	<div class="container">
+		<h2>Our Management</h2>
+		<div class="breadcrumb">
+			<ul class="breadcrumb">
+				<!-- Breadcrumb NavXT 7.2.0 -->
+				<span property="itemListElement" typeof="ListItem"><i class="fa fa-home"></i><a property="item"
+						typeof="WebPage" title="Go to TKM Institute of Management." href="{%  url 'web:index' %}"
+						class="home"><span property="name">Home</span></a>
+					<meta property="position" content="1">
+				</span><i class="fa fa-angle-right"></i><span property="itemListElement" typeof="ListItem"><span
+						property="name">Our Management</span>
+					<meta property="position" content="2">
+				</span>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<div class="main-content">
+	<div class="container cu-cont">
+
+        <div class="row justify-content-center">
+            
+            <div class="col-12 col-md-3 col-lg-3">
+                <div class="faculty_card">
+                    <div class="faculty_img_wrap">
+                        <img src="static\images\nazar.jpg" alt="" style="width: 250px;">
+                    </div>
+                    
+                    <h2 class="heading3">NAZAR KADAYARA</h2>
+                    <p class="greenfont">Chairman, Managing Council</p>
+                </div>
+            </div>
+            <div class="col-12 col-md-3 col-lg-3" style="margin-left: 20px;">
+                <div class="faculty_card">
+                    <div class="faculty_img_wrap">
+                        <img src="static\images\abdul.jpg" alt="" style="width: 250px;">
+                    </div>
+                    
+                    <h2 class="heading3">P.S.ABDUL LATHEEF</h2>
+                    <p class="greenfont">General Secretary, Managing Council</p>
+                </div>
+            </div>
+            
+            
+            <div class="col-12 col-md-4 col-lg-3">
+                <div class="faculty_card">
+                    <div class="faculty_img_wrap">
+                        <img src="static\images\khaja.jpg" alt="" style="width: 250px;">
+                    </div>
+                    <h2 class="heading3">A.KHAJA MOHAMMED</h2>
+                    <p class="greenfont">Treasurer, Managing Council</p>
+                </div>
+            </div>
+            
+            
+            <div class="col-12 ">
+             
+                <p>Muslim Association College of Engineering, (MACE) Venjaramoodu, Thiruvananthapuram is managed by the Muslim Association, founded in 1956, on the initiative of a band of enlightened citizens of the capital city.The Muslim Association, through the years, has grown in to one of the premier cultural organizations of the State, whose contributions to the cause of education has been widely acknowledged. The Association’s main asset has always been a fast growing fraternity of members, many of whom occupy prominent positions in different professions, civil services, business, social and cultural fields.</p>
+                
+            </div>
+            
+        </div>
+		<!-- /wp:columns -->
+
+		<!-- wp:buttons -->
+		<div class="wp-block-buttons"></div>
+		<!-- /wp:buttons -->
+	</div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load static %}
+{% load static %}
+{% block content %}
+
+<div class="page-title">
+	<div class="container">
+		<h2>NSS</h2>
+		<div class="breadcrumb">
+			<ul class="breadcrumb">
+				<!-- Breadcrumb NavXT 7.2.0 -->
+				<span property="itemListElement" typeof="ListItem"><i class="fa fa-home"></i><a property="item"
+						typeof="WebPage" title="Go to TKM Institute of Management." href="{%  url 'web:index' %}"
+						class="home"><span property="name">Home</span></a>
+					<meta property="position" content="1">
+				</span><i class="fa fa-angle-right"></i><span property="itemListElement" typeof="ListItem"><span
+						property="name">Activities</span>
+					<meta property="position" content="2">
+				</span>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<div class="main-content">
+	<div class="container cu-cont">
+
+        <section class="container-fluid section">
+            <div class="container">
+                <div class="row align-items-center">
+                    
+                    <div class="col-12">
+                        <h2 class="heading2">NSS</h2>
+                        <p>The National Service Scheme wing at MACE is responsible for a number of college activities, all performed as a part of community service. Awareness classes, debates, lectures and talks on various important topics are regularly conducted. Free Medical Camps, checkups and free clinical tests are also a regular show here at MACE. We have had many blood donation camps too. The pipe compost, a solution to waste disposal, has been installed at MACE and is a grand success. Planting of seedlings throughout the campus, colony road and in the adopted village have been carried out as a reply to “the global warming effect as part of ‘the Tree Programme”.</p>
+                    </div>
+                    
+                    <div class="col-12">
+                        <h3 class="tablehead">NSS Staff</h3>
+                        
+                        <div class="row justify-content-center">
+                            
+                            <div class="col-12 col-md-4 col-lg-3">
+                                <div class="faculty_card">
+                                    <div class="faculty_img_wrap">
+                                        <img src="{% static 'images/dummy.jpg' %}" style="width: 250px;" alt="">
+                                    </div>
+                                    
+                                    <h2 class="heading3">Mr. Subin Ashraf</h2>
+                                    <p>NSS Program Officer</p>
+                                    <label class="greenfont">Asst. Prof. Mechanical Engineering</label>
+                                </div>
+                            </div>
+        
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+		<!-- /wp:columns -->
+
+		<!-- wp:buttons -->
+		<div class="wp-block-buttons"></div>
+		<!-- /wp:buttons -->
+	</div>
+</div>
+
+{% endblock %}

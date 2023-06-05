@@ -1,0 +1,66 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load static %}
+{% block content %}
+
+<!-- #page-title -->
+<div class="page-title">
+	<div class="container">
+		<h2>{{title}}</h2>
+		<div class="breadcrumb">
+							<ul class="breadcrumb">
+					<!-- Breadcrumb NavXT 7.2.0 -->
+<span property="itemListElement" typeof="ListItem"><i class="fa fa-home"></i><a property="item" typeof="WebPage" title="Go to TKM Institute of Management." href="" class="home"><span property="name">Home</span></a><meta property="position" content="1"></span><i class="fa fa-angle-right"></i><span property="itemListElement" typeof="ListItem"><span property="name">Admission Information</span><meta property="position" content="2"></span>				</ul>
+					</div>
+	</div>
+</div>
+<div class="main-content">
+	<div class="container cu-cont">
+			
+<p class="has-large-font-size" style="letter-spacing:1px"><strong>Eligibility</strong></p>
+
+
+
+<p class="has-black-color has-text-color" style="font-size:18px">Minimum of 50% marks in Part III for B.A, B.Sc &amp; B.Com graduates and 50% aggregate marks (for all semesters/all parts) for all other graduates. University of Kerala norms applies in the case of OBC &amp; SC/ST candidates. Candidates seeking admission under this quota should attach copies of Caste Certiﬁcate along with the application form.</p>
+
+
+
+<p class="has-large-font-size"><strong>How to Apply</strong></p>
+
+
+
+<ul>
+<li>Candidates are required to apply online by filling up the application carefully. </li>
+
+
+
+<li>An amount of Rs.500/- should also be paid online towards the application fee.</li>
+
+
+
+<li>Attach a copy of CAT, CMAT or K-MAT (Kerala), score card.<br> <strong><button><a href="{% url 'web:apply_online' %}">online application</a> </button></strong>  <br></li>
+</ul>
+
+
+
+<p class="has-large-font-size"><strong>Selection Criteria</strong></p>
+
+
+
+<p style="font-size:18px">Selection of candidates to MBA Programme is based on eligibility criteria as ﬁxed by the University of kerala as above and the minimum score obtained in Management Aptitude Test (CAT, C-MAT and K-MAT/(Kerala), as prescribed by admission regulatory committee and the Group Discussion and Personal Interview conducted by the Institute. <br>CAT, CMAT or K-MAT (Kerala) score carries a weightage of 80%. Group Discussion &amp; Personal Interview carry a weightage of 10% each. Final Selection is based on the composite score calculated from CAT, C-MAT or K-MAT(Kerala) Score, Group Discussion and Personal Interview. </p>
+
+
+
+
+<!--  -->
+<a href="whatsapp://send?phone=918089090419&text=Hi" class="float-wa" target="_blank">
+    <i class="fa fa-whatsapp my-float"></i>
+</a>
+<style>
+    .red {
+        color: rgb(220, 0, 0);
+    }
+</style>
+
+{% endblock content %}

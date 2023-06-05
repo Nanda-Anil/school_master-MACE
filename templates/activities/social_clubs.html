@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load static %}
+{% load static %}
+{% block content %}
+
+<div class="page-title">
+	<div class="container">
+		<h2>Social Club	</h2>
+		<div class="breadcrumb">
+			<ul class="breadcrumb">
+				<!-- Breadcrumb NavXT 7.2.0 -->
+				<span property="itemListElement" typeof="ListItem"><i class="fa fa-home"></i><a property="item"
+						typeof="WebPage" title="Go to TKM Institute of Management." href="{%  url 'web:index' %}"
+						class="home"><span property="name">Home</span></a>
+					<meta property="position" content="1">
+				</span><i class="fa fa-angle-right"></i><span property="itemListElement" typeof="ListItem"><span
+						property="name">Activities</span>
+					<meta property="position" content="2">
+				</span>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<div class="main-content">
+	<div class="container cu-cont">
+
+        <section class="container-fluid section">
+			<div class="container">
+				<div class="row align-items-center">
+					
+					<div class="col-12">
+						<p>Opportunities are provided to students to perform their social duties in order to achieve a better understanding and appreciation not only of their own culture, but also that of other cultures. This fosters a sense of duty and responsibility among students and builds supportive and inclusive communities.</p>
+						
+						<h2 class="heading2">Red Ribbon Club</h2>
+						
+						<p>MACE is an active member of the Red Ribbon Club, a movement by the Government of India in educational Institutions through which students are made aware of AIDS. Currently there are more than 100 active members. We conduct regular Blood Donation Classes and Free Medical Checkups. Awareness Classes on Prevention and Control of HIV/AIDS have been organized. Mass Blood Donation Campaign, Pamphlets and Notice distribution are other activities of the Red Ribbon Club.</p>
+						
+						<h2 class="heading2">Bhoo Mithra Sena Club (BMSC)</h2>
+						
+						<p>The Bhoo Mithra Sena Club, aimed at inspiring students to appreciate the environment and to respond positively to environmental concerns, is a Government of Kerala initiative for strengthening the commitment of students towards environmental conservation at college levels across the state. In addition to regular activities like seminars, awareness classes and talks on environment issues, BMSC of MACE also focuses on planting of seedlings, pamphlet distribution regarding environmental conservation, premises and campus cleaning activities and many more.</p>
+					</div>
+					
+				</div>
+			</div>
+		</section>
+		<!-- /wp:columns -->
+
+		<!-- wp:buttons -->
+		<div class="wp-block-buttons"></div>
+		<!-- /wp:buttons -->
+	</div>
+</div>
+
+{% endblock %}

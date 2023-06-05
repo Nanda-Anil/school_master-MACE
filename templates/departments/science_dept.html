@@ -1,0 +1,140 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load static %}
+{% load static %}
+{% block content %}
+
+<div class="page-title">
+    <div class="container">
+        <h2>Science &amp; Humanities</h2>
+        <div class="breadcrumb">
+            <ul class="breadcrumb">
+                <!-- Breadcrumb NavXT 7.2.0 -->
+                <span property="itemListElement" typeof="ListItem"><i class="fa fa-home"></i><a property="item"
+                        typeof="WebPage" title="Go to TKM Institute of Management." href="{%  url 'web:index' %}"
+                        class="home"><span property="name">Home</span></a>
+                    <meta property="position" content="1">
+                </span><i class="fa fa-angle-right"></i><span property="itemListElement" typeof="ListItem"><span
+                        property="name">Departments</span>
+                    <meta property="position" content="2">
+                </span>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="main-content">
+    <div class="container cu-cont">
+
+        <section class="container-fluid section">
+            <div class="container">
+                <div class="row align-items-center">
+
+                    <div class="col-12">
+                        <h2 class="heading1">Science &amp; Humanities</h2>
+                        <p>The Basic Science &amp; Humanities Department was established in the year 2002. This
+                            department deals with subjects like Engineering Mathematics, Physics, Chemistry and English.
+                        </p>
+                    </div>
+
+
+
+                    <div class="col-12">
+                        <h3 class="tablehead">Faculty</h3>
+                        <div id="placed" class="owl-carousel owl-theme owl-loaded owl-drag">
+
+                            <div class="faculty_card">
+                                <div class="faculty_img_wrap">
+                                    <img src="{% static 'images/dummy.jpg' %}" alt="">
+                                </div>
+                                <h2 class="heading3">Shambu Raj</h2>
+                                <p>Asst. Professor/Maths</p>
+                                <label class="greenfont">M.Sc</label>
+                            </div>
+
+                            <div class="faculty_card">
+                                <div class="faculty_img_wrap">
+                                    <img src="{% static 'images/dummy.jpg' %}" alt="">
+                                </div>
+                                <h2 class="heading3">Abin</h2>
+                                <p>Asst. Professor/Maths</p>
+                                <label class="greenfont">M.Sc</label>
+                            </div>
+
+                            <div class="faculty_card">
+                                <div class="faculty_img_wrap">
+                                    <img src="{% static 'images/dummy.jpg' %}" alt="">
+                                </div>
+                                <h2 class="heading3">Lekshmi R</h2>
+                                <p>Asst. Professor/Physics</p>
+                                <label class="greenfont">M.Sc,MPhil</label>
+                            </div>
+
+                            <div class="faculty_card">
+                                <div class="faculty_img_wrap">
+                                    <img src="{% static 'images/dummy.jpg' %}" alt="">
+                                </div>
+                                <h2 class="heading3">Ms.Naseema Beevi</h2>
+                                <p>Asst. Professor/Physics</p>
+                                <label class="greenfont">M.Sc,MPhil</label>
+                            </div>
+
+                            <div class="faculty_card">
+                                <div class="faculty_img_wrap">
+                                    <img src="{% static 'images/dummy.jpg' %}" alt="">
+                                </div>
+                                <h2 class="heading3">Prof. T Arshad</h2>
+                                <p>Professor (Chemistry) &amp; HOD</p>
+                                <label class="greenfont">M.Sc, M.Phil</label>
+                            </div>
+
+                            <div class="faculty_card">
+                                <div class="faculty_img_wrap">
+                                    <img src="{% static 'images/dummy.jpg' %}" alt="">
+                                </div>
+                                <h2 class="heading3">Suma Madhuri Devi</h2>
+                                <p>Asst. Professor/English</p>
+                                <label class="greenfont">M.A, B.Ed</label>
+                            </div>
+
+                            <div class="faculty_card">
+                                <div class="faculty_img_wrap">
+                                    <img src="{% static 'images/dummy.jpg' %}" alt="">
+                                </div>
+                                <h2 class="heading3">Shameer E</h2>
+                                <p>Asst. Professor/P.E</p>
+                                <label class="greenfont">M.PEd</label>
+                            </div>
+
+                            <div class="faculty_card">
+                                <div class="faculty_img_wrap">
+                                    <img src="{% static 'images/dummy.jpg' %}" alt="">
+                                </div>
+                                <h2 class="heading3">Sandhya Rani M</h2>
+                                <p>Asst. Professor/Mathematics</p>
+                                <label class="greenfont">M.Sc, M.Phil</label>
+                            </div>
+
+                            <div class="faculty_card">
+                                <div class="faculty_img_wrap">
+                                    <img src="{% static 'images/dummy.jpg' %}" alt="">
+                                </div>
+                                <h2 class="heading3">Sandhya Rani M</h2>
+                                <p>Asst. Professor/Mathematics</p>
+                                <label class="greenfont">M.Sc, M.Phil</label>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+        </section>
+        <!-- /wp:columns -->
+
+        <!-- wp:buttons -->
+        <div class="wp-block-buttons"></div>
+        <!-- /wp:buttons -->
+    </div>
+</div>
+
+{% endblock %}

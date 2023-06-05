@@ -1,0 +1,217 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load static %}
+{% block content %}
+
+<!-- #page-title -->
+<div class="page-title">
+	<div class="container">
+		<h2>{{title}}</h2>
+		<div class="breadcrumb">
+							<ul class="breadcrumb">
+					<!-- Breadcrumb NavXT 7.2.0 -->
+<span property="itemListElement" typeof="ListItem"><i class="fa fa-home"></i><a property="item" typeof="WebPage" title="Go to TKM Institute of Management." href="" class="home"><span property="name">Home</span></a><meta property="position" content="1"></span><i class="fa fa-angle-right"></i><span property="itemListElement" typeof="ListItem"><span property="name">Apply Online</span><meta property="position" content="2"></span>				</ul>
+					</div>
+	</div>
+</div>
+<div class="pd-p">
+	<div class="container cu-cont">
+        <form id="applyOnline" method="POST" action="" enctype="multipart/form-data" novalidate="novalidate" data-url="{% url 'web:admission_form' %}">
+            {% csrf_token %}
+            <fieldset>
+                <section class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <label>Name of the Applicant <span class="attention">(as shown in certificate)</span>*</label>
+                        <input class="required" type="text" name="oa-name" value="" tabindex="1">
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-4">
+                        <label>DOB</label>
+                        <input type="text" name="oa-dob" class="dob" tabindex="2">
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-4">
+                        <label>Age</label>
+                        <input type="text" name="oa-age" tabindex="3">
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-4">
+                        <label>Gender</label>
+                        <select id="oa-gender" name="oa-gender" tabindex="5">
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                </section>
+                <section class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <label>Nationality</label>
+                        <input type="text" name="oa-nationality" tabindex="6">
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <label>State</label>
+                        <input type="text" name="oa-state" tabindex="7">
+                    </div>
+                </section>
+            
+                <section class="row">
+                    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                        <label>Father's / Gaurdian's Name</label>
+                        <input type="text" name="oa-parent" tabindex="10"> 
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                        <label>Occupation / Designation</label>
+                        <input type="text" name="oa-occu-desig" tabindex="11"> 
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                        <label>Organisation</label>
+                        <input type="text" name="oa-organisation" tabindex="12"> 
+                    </div>
+                </section>
+                <section class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <label>Permanent Address</label>
+                        <textarea class="required" name="oa-per-address" value="" maxlength="300" tabindex="13"></textarea>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <label>PIN No</label> 
+                        <input type="text" name="oa-pin-per" tabindex="14">
+                        <label>Email</label>
+                        <input type="text" class="required email" name="oa-email-per" tabindex="15">
+                        <label>Phone</label> 
+                        <input class="required number" maxlength="11" minlength="10" type="text" name="oa-phone-per" tabindex="16">
+                    </div>
+                </section>
+       
+                {% comment %} <section class="row">
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                    <label for="ishuman">Enter Code:</label>
+                    <div class="timCaptchaWr"><section><img class="capImg" src="https://tkmim.ac.in/wp-content/uploads/timoa/captcha/1939338373.png"><input type="hidden" value="1939338373" name="isbrain" /></section><a class="reload" href="#" title="Reload"></a><i class="loader"></i></div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                        <label></label>
+                    <input class="capTxt required" type="text" name="ishuman" tabindex="82">
+                    </div>
+                </section> {% endcomment %}
+                <section class="row">
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                        <label></label>
+                        <input id="regSubmit" type="submit" name="submit" value="Submit Form" class="button" tabindex="83">
+                        <div class="tinyLoader"></div>
+                    </div>
+                </section>
+            </fieldset>
+        </form>
+   
+        <link href="{% static 'css/toastr.css' %}" rel="stylesheet" type="text/css" id="app-dark-stylesheet" />
+
+        <script src="{% static 'js/toastr.min.js' %}"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {  
+
+                $( ".dp11111").datepicker({
+                    dateFormat: 'YY-MM-DD',
+                    changeYear: true,
+                    minDate: "-5Y",
+                });
+                $( ".yr1111" ).datepicker({dateFormat: 'YY',  changeYear: true,  changeMonth: false});
+                $('.tinyLoader').hide();
+                var ajaxurl = $('#applyOnline').attr('data-url');
+                var zsoptions = {
+                    url: ajaxurl,
+                    target:'#regResponse',
+                    dataType: 'json', // set the expected data type to JSON
+                    beforeSubmit:function(){
+                        var res=$('#applyOnline').validate().numberOfInvalids();
+                        if(res==0){
+                            $(".tinyLoader").show();
+                            $('#regResponse').empty();
+                            return true;
+                        } else {
+                            return false;
+                        }
+                    },
+                    success:function(data){
+                        console.log(data.success); // logs the success flag from the response
+                        console.log(data.message); // logs the message from the response
+                        $('.tinyLoader').hide();
+                        $('#applyOnline')[0].reset(); // reset the form fields
+                        // Get the count span element
+                        let countSpan = document.getElementById('countSpan');
+                        countSpan.innerHTML = data.count;
+
+                        toastr.success(data.message, 'Success', {
+                            closeButton: true,
+                            progressBar: true,
+                            positionClass: 'toast-top-right',
+                            timeOut: 3000,
+                        });
+
+                    },
+                    error:function(xhr, status, error){ // handle errors
+                        console.log(xhr); // log the full response object
+                        console.log(status); // log the status code
+                        console.log(error); // log the error message
+                    },
+                    data : { action : 'submitTOA' }
+                };
+                $('#applyOnline').ajaxForm(zsoptions);
+        
+            });
+        </script>
+	</div>
+</div>
+<div id="stickyAdmission">
+    <a href="{% url 'web:admission_information' %}">Available Seats <span id="countSpan">{{count}}<span></a>
+</div>
+<div class="main-em-btn">
+    <button class="mainbtn"><i class="fa fa-download" aria-hidden="true"></i></i></button>
+    <span>
+        <button class="mainclosebtn"><i class="fa fa-times" aria-hidden="true"></i></button>
+    </span>
+    <div class="main-em-lis">
+        <ul id="menu-sticky-menu" class="sticky-menu"><li id="menu-item-3691" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-3691"><a href="https://tkmim.ac.in/category/newsletters/">Download Newsletters</a></li>
+<li id="menu-item-3692" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3692"><a href="https://tkmim.ac.in/brochures-2/">Download Brochures</a></li>
+</ul>    </div>
+</div>
+<!-- SEARCH BUTTON -->
+
+<div class="search-blk">
+<button class="search-ico"><i class="fa fa-search" aria-hidden="true"></i></button>
+
+</div>
+<div class="search-input">
+    <form role="search" method="get" class="search-form" action="https://tkmim.ac.in/">	
+        <input type="search" class="search-field" placeholder="Search &hellip;" value="" name="s" title="Search for:" />	
+    </form>
+</div>
+<!--  -->
+<a href="whatsapp://send?phone=918089090419&text=Hi" class="float-wa" target="_blank">
+    <i class="fa fa-whatsapp my-float"></i>
+</a>
+<style>
+    .red {
+        color: rgb(220, 0, 0);
+    }
+    div.overlay-popup-admission {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        min-height: 100vh;
+        z-index: 99;
+        background-color: #131313;
+        opacity: 0.9;
+    }
+    div.popup-open-admission {
+        position: fixed;
+        left: 15%;
+        right: 150px;
+        bottom: 0;
+        top: 8%;
+        z-index: 100;
+        width: 32%;
+        margin: auto;
+    }
+</style>
+
+{% endblock content %}
